@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cahier de Prépa — PSI Roland-Garros</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f6f8fb;
+    --border:#e4e7ec;
+    --text:#20242e;
+    --text-muted:#697180;
+    --accent:#2952cc;
+    --accent-soft:#eaf0ff;
+    --folder:#f0ad4e;
+    --radius:8px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* Header */
+  header.top{
+    position:sticky; top:0; z-index:10;
+    background:var(--bg);
+    border-bottom:1px solid var(--border);
+  }
+  .top-inner{
+    max-width:980px; margin:0 auto;
+    padding:18px 24px 14px;
+    display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+  }
+  .brand{display:flex; align-items:center; gap:10px; flex-shrink:0;}
+  .brand-mark{
+    width:34px;height:34px;border-radius:9px;
+    background:linear-gradient(155deg,var(--accent),#5b7cf2);
+    display:flex;align-items:center;justify-content:center;
+    color:white;font-weight:700;font-size:15px;
+    letter-spacing:-0.02em;
+  }
+  .brand-text h1{font-size:16px;margin:0;font-weight:650;letter-spacing:-0.01em;}
+  .brand-text p{font-size:12.5px;margin:1px 0 0;color:var(--text-muted);}
+
+  .search-wrap{flex:1; min-width:220px; position:relative;}
+  .search-wrap input{
+    width:100%;
+    padding:9px 14px 9px 36px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:var(--bg-alt);
+    font-size:14px;
+    color:var(--text);
+    outline:none;
+    transition:border-color .15s, background .15s;
+  }
+  .search-wrap input:focus{background:var(--bg); border-color:var(--accent);}
+  .search-icon{
+    position:absolute; left:12px; top:50%; transform:translateY(-50%);
+    width:15px;height:15px; color:var(--text-muted); pointer-events:none;
+  }
+
+  .view-toggle{display:flex; gap:2px; background:var(--bg-alt); border-radius:8px; padding:2px; flex-shrink:0;}
+  .view-toggle button{
+    border:none; background:transparent; padding:6px 9px; border-radius:6px;
+    cursor:pointer; color:var(--text-muted); display:flex; align-items:center;
+  }
+  .view-toggle button.active{background:var(--bg); color:var(--accent); box-shadow:0 1px 2px rgba(20,30,60,.08);}
+  .view-toggle svg{width:16px;height:16px;}
+
+  /* Breadcrumb + toolbar */
+  .toolbar{
+    max-width:980px; margin:0 auto; padding:14px 24px 4px;
+    display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+  .crumbs{display:flex; align-items:center; flex-wrap:wrap; gap:4px; font-size:14px; color:var(--text-muted);}
+  .crumbs button{
+    background:none;border:none;font:inherit;cursor:pointer;color:var(--text-muted);
+    padding:4px 6px; border-radius:6px;
+  }
+  .crumbs button:hover{background:var(--bg-alt); color:var(--text);}
+  .crumbs .current{color:var(--text); font-weight:600;}
+  .crumbs .sep{color:#c4c9d4;}
+  .count-label{font-size:12.5px; color:var(--text-muted); white-space:nowrap;}
+
+  main{max-width:980px; margin:0 auto; padding:6px 24px 60px;}
+
+  /* List view */
+  .list{border-top:1px solid var(--border);}
+  .row{
+    display:flex; align-items:center; gap:14px;
+    padding:11px 6px;
+    border-bottom:1px solid var(--border);
+    cursor:pointer;
+    transition:background .1s;
+  }
+  .row:hover{background:var(--bg-alt);}
+  .row .icon{
+    width:34px;height:34px;border-radius:8px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .row .icon svg{width:19px;height:19px;}
+  .row .name{flex:1; min-width:0;}
+  .row .name .n{font-size:14px; font-weight:500; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .row .name .p{font-size:12px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:1px;}
+  .row .badge{
+    font-size:11px; color:var(--text-muted); background:var(--bg-alt);
+    border:1px solid var(--border); border-radius:5px; padding:2px 7px;
+    flex-shrink:0; text-transform:uppercase; letter-spacing:.02em;
+  }
+  .row .dl{
+    flex-shrink:0; width:30px;height:30px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--text-muted); opacity:0;
+    transition:opacity .12s, background .12s, color .12s;
+  }
+  .row:hover .dl{opacity:1;}
+  .row .dl:hover{background:var(--accent-soft); color:var(--accent);}
+  .row .dl svg{width:16px;height:16px;}
+  .row .chev{width:16px;height:16px;color:#c4c9d4;flex-shrink:0;}
+
+  /* Grid view */
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:12px; padding:14px 0;
+  }
+  .card{
+    border:1px solid var(--border); border-radius:12px; padding:16px 12px;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    cursor:pointer; text-align:center; transition:box-shadow .12s, border-color .12s;
+  }
+  .card:hover{box-shadow:0 3px 14px rgba(20,30,60,.08); border-color:#d4d9e2;}
+  .card .icon{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;}
+  .card .icon svg{width:24px;height:24px;}
+  .card .n{font-size:12.5px; font-weight:500; line-height:1.35; word-break:break-word;}
+  .card .meta{font-size:10.5px; color:var(--text-muted);}
+
+  .empty{padding:60px 20px; text-align:center; color:var(--text-muted);}
+  .empty svg{width:40px;height:40px;margin-bottom:10px;opacity:.5;}
+  .empty p{font-size:14px; margin:0;}
+
+  footer{max-width:980px; margin:0 auto; padding:10px 24px 36px; font-size:12px; color:var(--text-muted); border-top:1px solid var(--border);}
+
+  @media (max-width:560px){
+    .top-inner{padding:14px 16px 10px;}
+    .toolbar{padding:12px 16px 4px;}
+    main{padding:6px 16px 50px;}
+    .brand-text p{display:none;}
+    footer{padding:10px 16px 30px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-mark">π</div>
+      <div class="brand-text">
+        <h1>Cahier de Prépa</h1>
+        <p>PSI Roland-Garros · 2025–2026</p>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="search" type="text" placeholder="Rechercher un fichier ou un dossier…" autocomplete="off">
+    </div>
+    <div class="view-toggle" id="viewToggle">
+      <button data-view="list" class="active" title="Vue liste">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+      <button data-view="grid" title="Vue grille">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="crumbs" id="crumbs"></div>
+  <div class="count-label" id="countLabel"></div>
+</div>
+
+<main>
+  <div id="content"></div>
+</main>
+
+<footer>
+  Site statique généré à partir du cahier de prépa. Les liens de téléchargement pointent vers le dossier <code>data/</code> placé à côté de cette page.
+</footer>
+
+<script>
+const MANIFEST = {"name": "data", "type": "folder", "children": [{"name": "Général", "type": "folder", "children": [{"name": "Calendrier concours (inscription et épreuves) session 2026.pdf", "type": "file", "children": null}, {"name": "Colloscope PSI RG 20252026 semaines 1 à 14 v7.pdf", "type": "file", "children": null}, {"name": "Colloscope PSI RG 20252026 semaines 12 à 25 v3.pdf", "type": "file", "children": null}, {"name": "EDT PSI 2025 2026.pdf", "type": "file", "children": null}, {"name": "Groupes et trinômes PSI RG 2025-2026 v3 ( à compter de la semaine 15).pdf", "type": "file", "children": null}, {"name": "Groupes et trinômes PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Planning CB PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Planning préparation oraux mai-juin 2026 v2.ods", "type": "file", "children": null}, {"name": "Planning PSI RG 2025_2026.pdf", "type": "file", "children": null}, {"name": "Presentation 2025 BCPST et PSI.pdf", "type": "file", "children": null}, {"name": "Presentation 2025 BCPST et PSI.pptx", "type": "file", "children": null}, {"name": "trombi PSI 2025-26.pdf", "type": "file", "children": null}]}, {"name": "Logiciels", "type": "folder", "children": [{"name": "LatisPro.zip", "type": "file", "children": null}, {"name": "pySyLiC.zip", "type": "file", "children": null}, {"name": "Regressi.zip", "type": "file", "children": null}]}, {"name": "Mathématiques", "type": "folder", "children": [{"name": "Corrigés TD", "type": "folder", "children": [{"name": "Feuille 1 - Suites - Séries", "type": "folder", "children": []}, {"name": "Feuille 2 - Espaces vectoriels", "type": "folder", "children": []}, {"name": "Feuille 3 - Applications linéaires - Hyperplans", "type": "folder", "children": []}, {"name": "Feuille 4 - Matrices - Déterminants", "type": "folder", "children": []}, {"name": "Feuille 5 - Intégration", "type": "folder", "children": []}]}, {"name": "Cours", "type": "folder", "children": [{"name": "PSI - Chapitre A - Suites numériques.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre B - Séries numériques.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre C - Espaces vectoriels.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre D - Applications linéaires.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre E - Matrices et déterminants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre F - Intégrales généralisées.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre G - Réduction.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre H - Suites et séries de fonctions.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre I - Probabilités - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre J - Séries entières - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre K - Intégrales dépendant d'un paramètre - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre L - Variables aléatoires - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre M - Espaces préhilbertiens - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre N - Espaces vectoriels normés - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre O - Topologie - Limites et continuité - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre P - Endomorphismes remarquables des espaces euclidiens - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre Q - Equations différentielles linéaires - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre R - Dérivation des fonctions vectorielles - 25-26 - Version étudiants.pdf", "type": "file", "children": null}, {"name": "PSI - Chapitre S - Fonctions de plusieurs variables - 25-26 - Version étudiants.pdf", "type": "file", "children": null}]}, {"name": "Devoirs", "type": "folder", "children": [{"name": "Sujets de révision semaine du 16 mars", "type": "folder", "children": [{"name": "Banque_E3A_E4A_2024_PSI_Mathématiques_ea.pdf", "type": "file", "children": null}, {"name": "CentraleSupélec_2025_PSI_Mathématiques_1_e.pdf", "type": "file", "children": null}, {"name": "Concours_Commun_Polytechniques_(CCINP)_2023_PSI_Mathématiques_e.pdf", "type": "file", "children": null}, {"name": "Mathématiques II-Mines-Ponts-PSI-2025.pdf", "type": "file", "children": null}]}, {"name": "Sujets de révision semaine du 23 mars", "type": "folder", "children": [{"name": "Banque_E3A_E4A_2022_PSI_Mathématiques_e.pdf", "type": "file", "children": null}, {"name": "CentraleSupélec_2023_PSI_Mathématiques_2_e.pdf", "type": "file", "children": null}, {"name": "Concours_Commun_Mines-Ponts_(CCMP)_2024_PSI_Mathématiques_2_e.pdf", "type": "file", "children": null}, {"name": "Concours_Commun_Polytechniques_(CCINP)_2022_PSI_Mathématiques_e.pdf", "type": "file", "children": null}]}, {"name": "Sujets de révision semaine du 30 mars 2026", "type": "folder", "children": [{"name": "Banque_E3A_E4A_2021_PSI_Mathématiques_ea.pdf", "type": "file", "children": null}, {"name": "CCINP PSI 2021.pdf", "type": "file", "children": null}, {"name": "Centrale PSI 1 2023.pdf", "type": "file", "children": null}, {"name": "e3a PC 2022.pdf", "type": "file", "children": null}, {"name": "Mines-Ponts PC-PSI 1 2024.pdf", "type": "file", "children": null}]}, {"name": "CB PSI RG 2025-2026 (CCINP PSI 2025 - CS PSI 1 2025).pdf", "type": "file", "children": null}, {"name": "Concours_Commun_Polytechniques_(CCINP)_2023_PSI_Mathématiques_e.pdf", "type": "file", "children": null}, {"name": "Corrigé du DS 1 PSI RG 2026-2026.pdf", "type": "file", "children": null}, {"name": "Devoir de vacances.pdf", "type": "file", "children": null}, {"name": "DM 1 PSI RG 2025-2026 (séries).pdf", "type": "file", "children": null}, {"name": "DM 3 PSI RG 2025-2026 - e3a PC 2024.pdf", "type": "file", "children": null}, {"name": "DM 3b PSI RG 2025-2026 - Mines-Ponts PC-PSI 2025.pdf", "type": "file", "children": null}, {"name": "DM 4 PSI RG 2025-2026 - CCINP PC 2023.pdf", "type": "file", "children": null}, {"name": "DM 4b PSI RG 2025_2026 - Mines-Ponts PC 2 2025.pdf", "type": "file", "children": null}, {"name": "DM 5 PSI RG 2025-2026 - CCINP PC 2018.pdf", "type": "file", "children": null}, {"name": "DM 5b PSI RG 2025-2026 - CentraleSupélec PSI 1 2024.pdf", "type": "file", "children": null}, {"name": "DS 1 PSI RG 2026-2026 (suites-séries-algèbre linéaire de Sup).pdf", "type": "file", "children": null}, {"name": "DS 2 PSI RG 2025-2026 (suites-séries-algèbre linéaire - intégration de Sup).pdf", "type": "file", "children": null}, {"name": "DS 3 PSI RG 2025-2026 (suites et séries de fonctions - réduction).pdf", "type": "file", "children": null}, {"name": "DS 4 PSI RG 2025-2026 (CCINP PSI 2020 (réduction - intégrales à paramètre - probas) - CS PSI.pdf", "type": "file", "children": null}, {"name": "DS 5 PSI RG 2025-2026 (CCINP PSI 2024 - CS PSI 2 2025 - Mines-Ponts PSI 2 2020 ).pdf", "type": "file", "children": null}, {"name": "Interro 1 PSI RG 2025-2026.pdf", "type": "file", "children": null}]}, {"name": "Programmes de colles", "type": "folder", "children": [{"name": "Programme de colles semaine 1 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 10 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 11 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 12 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 13 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 14 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 15 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 16 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 17 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 18 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 19 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 2 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 20 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 3 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 4 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 5 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 6 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 7 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 8 PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Programme de colles semaine 9 PSI RG 2025-2026.pdf", "type": "file", "children": null}]}, {"name": "Préparation oraux", "type": "folder", "children": [{"name": "Préparation oraux 1 PSI RG 2025-2026 (algèbre linéaire - réduction).pdf", "type": "file", "children": null}, {"name": "Préparation oraux 2 PSI RG 2025-2026 (suites et séries - suites et séries de fonctions - sér.pdf", "type": "file", "children": null}, {"name": "Préparation oraux 3 PSI RG 2025-2026 (probabilités).pdf", "type": "file", "children": null}]}, {"name": "TD", "type": "folder", "children": [{"name": "Feuille d'exercices 1 (suites-séries).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 10 PSI RG 2025-2026 (séries entières).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 11 PSI RG 2025-2026 (intégrales dépendant d'un paramètre).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 12 PSI RG 2025-2026 (variables aléatoires).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 13 PSI RG 2025-2026 (espaces préhilbertiens).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 14 PSI RG 2025-2026 (espaces vectoriels normés).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 15 PSI RG 2025-2026 (topologie - limites et continuité - endomorphismes des es.pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 16 PSI RG 2025-2026 (endomorphismes des espaces euclidiens - théorème spectr.pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 17 PSI RG 2025-2026 (EDL - SDL).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 18 PSI RG 2025-2026 (Fonctions de plusieurs variables).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 2 (espaces vectoriels).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 3 PSI RG 2025-2026 (applications linéaires - matrices - hyperplans).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 4 PSI RG 2025-2026 (matrices et applications linéaires - déterminants).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 5 PSI RG 2025-2026 (intégration de Sup - intégrales généralisées).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 6 PSI RG 2025-2026 (réduction).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 7 PSI RG 2025-2026 (suites de fonctions).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 8 PSI RG 2025-2026 (convergence dominée - séries de fonctions).pdf", "type": "file", "children": null}, {"name": "Feuille d'exercices 9 PSI RG 2025-2026 (probabilités).pdf", "type": "file", "children": null}]}]}, {"name": "Sciences Physiques", "type": "folder", "children": [{"name": "Cours et TD", "type": "folder", "children": [{"name": "Chimie Sup 2025 2026.pdf", "type": "file", "children": null}, {"name": "Conversion de puissance 2025 2026.pdf", "type": "file", "children": null}, {"name": "Electrochimie 2025 2026.pdf", "type": "file", "children": null}, {"name": "Electromagnétisme 2025 2026.pdf", "type": "file", "children": null}, {"name": "Electronique 2025 2026.pdf", "type": "file", "children": null}, {"name": "L'énergie c'est quoi 2025.pdf", "type": "file", "children": null}, {"name": "Mécanique des fluides 2025-2026.pdf", "type": "file", "children": null}, {"name": "Mécanique Sup 2025 2026.pdf", "type": "file", "children": null}, {"name": "Ondes 2025 2026.pdf", "type": "file", "children": null}, {"name": "Présentation E6.ppsx", "type": "file", "children": null}, {"name": "Thermochimie 2025 2026.pdf", "type": "file", "children": null}, {"name": "Thermodynamique 2025 2026.pdf", "type": "file", "children": null}]}, {"name": "Devoir Maison", "type": "folder", "children": [{"name": "DM Modélisation n°1 CCINP-PSI-Mod-2022-Sismometres.pdf", "type": "file", "children": null}, {"name": "DM n°0 2026.pdf", "type": "file", "children": null}, {"name": "DM n°0 correction 2026.pdf", "type": "file", "children": null}, {"name": "DM n°1 2025.pdf", "type": "file", "children": null}, {"name": "DM n°1 correction 2025.pdf", "type": "file", "children": null}, {"name": "DM n°2 2025.pdf", "type": "file", "children": null}, {"name": "DM n°2 correction 2025.pdf", "type": "file", "children": null}, {"name": "DM n°3 2026.pdf", "type": "file", "children": null}, {"name": "DM n°3 correction 2026.pdf", "type": "file", "children": null}, {"name": "DM n°4 2026.pdf", "type": "file", "children": null}, {"name": "DM n°4 correction 2026.pdf", "type": "file", "children": null}, {"name": "DM n°5 2026.pdf", "type": "file", "children": null}, {"name": "DM n°5 correction 2026.pdf", "type": "file", "children": null}, {"name": "DMM1 Modélisation correction 2026.pdf", "type": "file", "children": null}]}, {"name": "Devoirs Surveillés", "type": "folder", "children": [{"name": "CCB correction 2026.pdf", "type": "file", "children": null}, {"name": "CCB correction modélisation physique 2026.pdf", "type": "file", "children": null}, {"name": "CCB Physique Chimie 2026 e3a-2025.pdf", "type": "file", "children": null}, {"name": "CCB-Modélisation et ingénierie numérique-CCINP PSI-2019.pdf", "type": "file", "children": null}, {"name": "DS n°1 2025.pdf", "type": "file", "children": null}, {"name": "DS n°1 correction 2025.pdf", "type": "file", "children": null}, {"name": "DS n°2 2026.pdf", "type": "file", "children": null}, {"name": "DS n°2 correction 2026.pdf", "type": "file", "children": null}, {"name": "DS n°3 2026.pdf", "type": "file", "children": null}, {"name": "DS n°3 correction 2026.pdf", "type": "file", "children": null}, {"name": "DS n°4 2026.pdf", "type": "file", "children": null}, {"name": "DS n°4 correction 2026.pdf", "type": "file", "children": null}, {"name": "DS n°5 2026.pdf", "type": "file", "children": null}, {"name": "DS n°5 correction 2026.pdf", "type": "file", "children": null}]}, {"name": "Fiches outils et conseils", "type": "folder", "children": [{"name": "Aide mémoire PSI Roland Garros.pdf", "type": "file", "children": null}, {"name": "Fiche Outils 1 Calcul des différentielles.pdf", "type": "file", "children": null}, {"name": "Fiche Outils 2 Opérateurs vectoriels.pdf", "type": "file", "children": null}, {"name": "Fiche Outils 3 Introduction à la métrologie BILAN.pdf", "type": "file", "children": null}, {"name": "Fiche Outils 3 Introduction à la métrologie.pdf", "type": "file", "children": null}, {"name": "Formulaire épreuves de sciences physiques.pdf", "type": "file", "children": null}, {"name": "Les grandes dates de la physique.pdf", "type": "file", "children": null}, {"name": "Patron-cylindriques.pdf", "type": "file", "children": null}, {"name": "Patron-spheriques.pdf", "type": "file", "children": null}, {"name": "Planning vacances noel 2025 2026.pdf", "type": "file", "children": null}, {"name": "Pour bien préparer votre rentrée 2025.pdf", "type": "file", "children": null}]}, {"name": "Interrogations", "type": "folder", "children": [{"name": "INTERROGATION 1  correction 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 1 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 10 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 10.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 11 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 11.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 12 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 12.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 13 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 13.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 14 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 14.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 15 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 15.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 2 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 2 correction 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 3 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 3 correction 2025.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 4 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 4.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 5 - Correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 5.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 6 - Correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 6.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 7 - Correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 7.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 8 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 8.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 9 correction.pdf", "type": "file", "children": null}, {"name": "INTERROGATION 9.pdf", "type": "file", "children": null}]}, {"name": "Préparation Oraux", "type": "folder", "children": [{"name": "Conseils avant les oraux_2026.pdf", "type": "file", "children": null}, {"name": "Polycopié Révision Oral.pdf", "type": "file", "children": null}, {"name": "Résolution de Problème.pdf", "type": "file", "children": null}]}, {"name": "Sujets Blancs", "type": "folder", "children": [{"name": "2020-Concours Centrale-Supélec-Physique-Chimie 2-PSI-enonce.pdf", "type": "file", "children": null}, {"name": "2021-Concours Centrale-Supélec-Physique-Chimie 2-PSI-enonce.pdf", "type": "file", "children": null}, {"name": "2023-Concours commun INP-Physique-Chimie-PSI-enonce.pdf", "type": "file", "children": null}, {"name": "2023-Concours e3a-Physique-Chimie-PSI-enonce.pdf", "type": "file", "children": null}, {"name": "2024-Concours commun INP-Physique-Chimie-PSI-enonce-2.pdf", "type": "file", "children": null}, {"name": "2024-Concours e3a-Physique-Chimie-PSI-enonce-2.pdf", "type": "file", "children": null}]}, {"name": "Sujets de Kholles PSI", "type": "folder", "children": [{"name": "Planche d'exercices colle  n°1.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°10.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°11.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°15.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°16.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°2.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°5  correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°5.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle  n°9.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°1 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°10 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°11 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°12 Correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°12.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°13 Correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°13.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°14 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°14.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°15 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°16 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°17 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°17.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°18 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°18.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°19 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°19.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°2 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°20 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°20.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°3 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°3.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°4 correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°4.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°6 Correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°6.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°7 Correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°7.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°8 Correction.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°8.pdf", "type": "file", "children": null}, {"name": "Planche d'exercices colle n°9 correction.pdf", "type": "file", "children": null}]}, {"name": "TIPE", "type": "folder", "children": [{"name": "Ressources TIPE", "type": "folder", "children": [{"name": "CHAPITRE GC4 Procédés de rectification.pdf", "type": "file", "children": null}, {"name": "CHAPITRE MF5 Physique des interfaces.pdf", "type": "file", "children": null}, {"name": "TP M3 Tension superficielle.pdf", "type": "file", "children": null}]}, {"name": "Exemple cahier de laboratoire.docx", "type": "file", "children": null}, {"name": "Fiche préparatoire du livrable TIPE.docx", "type": "file", "children": null}, {"name": "Fiche type matériel.docx", "type": "file", "children": null}, {"name": "Je réalise mon Power Point de TIPE.pptx", "type": "file", "children": null}, {"name": "Mon TIPE.jpg", "type": "file", "children": null}, {"name": "TIPE_2026_Attendus_Pedagogiques.pdf", "type": "file", "children": null}]}, {"name": "Travaux Pratiques", "type": "folder", "children": [{"name": "Gestion des incertitudes", "type": "folder", "children": [{"name": "CN0 Traitements des données et des incertitudes.pdf", "type": "file", "children": null}, {"name": "Exemple incertitude montecarlo.py", "type": "file", "children": null}, {"name": "Fiche Outils 3 Introduction à la métrologie BILAN.pdf", "type": "file", "children": null}, {"name": "Fiche Outils 3 Introduction à la métrologie.pdf", "type": "file", "children": null}]}, {"name": "Notice", "type": "folder", "children": [{"name": "Balance Mettler Toledo.pdf", "type": "file", "children": null}, {"name": "Balance OHAUS Traveler_Manual_Multi.pdf", "type": "file", "children": null}, {"name": "Balance Sartorius série LP (Chimie).pdf", "type": "file", "children": null}, {"name": "DataSheet AD633 (Annexe TP6).pdf", "type": "file", "children": null}, {"name": "datasheet Composant 4016.pdf", "type": "file", "children": null}, {"name": "DataSheet_ALI_tl081h.pdf", "type": "file", "children": null}, {"name": "Ecran oscilloscope.pdf", "type": "file", "children": null}, {"name": "GBF Métrix MTX3240 Notice.pdf", "type": "file", "children": null}, {"name": "JEULIN - Thermomètre type K.pdf", "type": "file", "children": null}, {"name": "Logiciel Latis Pro.pdf", "type": "file", "children": null}, {"name": "multimeter_MTX_3250 notice.pdf", "type": "file", "children": null}, {"name": "Multimère sevenmulti Mettler (chimie).pdf", "type": "file", "children": null}, {"name": "Multimètre UNI-T UT803.pdf", "type": "file", "children": null}, {"name": "Oscillo_SDS1000DL_UserManual.pdf", "type": "file", "children": null}, {"name": "P70.24_Centrale dacquisition Sysam SP5_EUROSMART.pdf", "type": "file", "children": null}, {"name": "PX120-wattmetre-metrix-FR.pdf", "type": "file", "children": null}, {"name": "SDG1000X_Manual_EN.pdf", "type": "file", "children": null}, {"name": "Spectro SECOMAM UVI light XT 2 et XT 5.pdf", "type": "file", "children": null}, {"name": "Sysam.pdf", "type": "file", "children": null}, {"name": "Teslamètre Jeulin.pdf", "type": "file", "children": null}, {"name": "TP2 Annexe DataSheet_ALI_tl081h.pdf", "type": "file", "children": null}, {"name": "wattmètre ISW 8000.pdf", "type": "file", "children": null}]}, {"name": "TP de Chimie", "type": "folder", "children": [{"name": "TP X3 Courbes intensité-potentiel.pdf", "type": "file", "children": null}, {"name": "TPX1 calorimetrie.pdf", "type": "file", "children": null}, {"name": "TPX2 Mesure d'une constante de réaction.pdf", "type": "file", "children": null}]}, {"name": "TP de Physique", "type": "folder", "children": [{"name": "TP0 Etude des oscillations forcées.pdf", "type": "file", "children": null}, {"name": "TP1 Filtre RC.pdf", "type": "file", "children": null}, {"name": "TP10 Mesure de l'épaisseur d'une feuille de papier.pdf", "type": "file", "children": null}, {"name": "TP11 Étude de la propagation d'une onde dans un câble coaxial.pdf", "type": "file", "children": null}, {"name": "TP12 Milieu ferromagnétique.pdf", "type": "file", "children": null}, {"name": "TP13 etude d'un transformateur.pdf", "type": "file", "children": null}, {"name": "TP2 Annexe DataSheet_ALI_tl081h.pdf", "type": "file", "children": null}, {"name": "TP2 Introduction à l'ALI.pdf", "type": "file", "children": null}, {"name": "TP3 Montages intégrateur et dérivateur.pdf", "type": "file", "children": null}, {"name": "TP4 ALI saturé.pdf", "type": "file", "children": null}, {"name": "TP5 Oscillateur de Wien.pdf", "type": "file", "children": null}, {"name": "TP6 Annexe DataSheet AD633.pdf", "type": "file", "children": null}, {"name": "TP6 Modulation démodulation.pdf", "type": "file", "children": null}, {"name": "TP7 datasheet Composant 4016.pdf", "type": "file", "children": null}, {"name": "TP7 Frequency Measurement with a Stroboscope.avi", "type": "file", "children": null}, {"name": "TP7 Numerisation dun signal.pdf", "type": "file", "children": null}, {"name": "TP8 filtrage numérique.pdf", "type": "file", "children": null}, {"name": "TP8 filtrage_son.mp3", "type": "file", "children": null}, {"name": "TP9 datasheet phototransistor.pdf", "type": "file", "children": null}, {"name": "TP9 Polarisation rectiligne Loi de Malus.pdf", "type": "file", "children": null}]}]}, {"name": "Points Clés PSI.pdf", "type": "file", "children": null}, {"name": "Points Clés SUP.pdf", "type": "file", "children": null}]}, {"name": "SI", "type": "folder", "children": [{"name": "DM", "type": "folder", "children": [{"name": "CCINP-PSI-2023-ChariotJacXsonU70-Sujet.pdf", "type": "file", "children": null}, {"name": "CCINP-PSI-Mod-2022-Sismometres-Corrige.pdf", "type": "file", "children": null}, {"name": "CCINP-PSI-Mod-2022-Sismometres-Sujet.pdf", "type": "file", "children": null}, {"name": "CCMP-PSI-2023-SEIS-Sujet.pdf", "type": "file", "children": null}, {"name": "CCS-PSI-2023-ExosqueletteAtalante-Sujet.pdf", "type": "file", "children": null}, {"name": "DM-rentree-25.pdf", "type": "file", "children": null}, {"name": "DM-rentree-PSI-2025-corrigé.pdf", "type": "file", "children": null}, {"name": "DM-toussaint-25-vanne-GTA-corrigé.pdf", "type": "file", "children": null}, {"name": "DM-toussaint-25-vanne-GTA.pdf", "type": "file", "children": null}, {"name": "Régulation GTA Annexes.pdf", "type": "file", "children": null}]}, {"name": "DS", "type": "folder", "children": [{"name": "CCINP-PSI-2023-ChariotJacXsonU70-Sujet.pdf", "type": "file", "children": null}, {"name": "CCINP-PSI-2024-PincesBrucellesHaptique-Sujet.pdf", "type": "file", "children": null}, {"name": "CCMP-PSI-2024-InverseurDePoussee-Sujet.pdf", "type": "file", "children": null}, {"name": "CCS-PSI-2024-DroidesAutonomes-Sujet.pdf", "type": "file", "children": null}, {"name": "PSI ds25-1-corrige.pdf", "type": "file", "children": null}, {"name": "PSI ds25-1.pdf", "type": "file", "children": null}, {"name": "PSI ds25-2-corrigé.pdf", "type": "file", "children": null}, {"name": "PSI ds25-2.pdf", "type": "file", "children": null}, {"name": "PSI ds25-3-corrigé-CCINP2019.pdf", "type": "file", "children": null}, {"name": "PSI ds25-3-DR.pdf", "type": "file", "children": null}, {"name": "PSI ds25-3.pdf", "type": "file", "children": null}]}, {"name": "dynamique", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "dyn-ch1-cinetique.pdf", "type": "file", "children": null}, {"name": "dyn-ch2-PFD.pdf", "type": "file", "children": null}, {"name": "dyn-ch3-TEC.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "PFD-TD1.pdf", "type": "file", "children": null}, {"name": "PFD-TD1_corrige.pdf", "type": "file", "children": null}, {"name": "PFD-TD2-cor.pdf", "type": "file", "children": null}, {"name": "PFD-TD2.pdf", "type": "file", "children": null}, {"name": "PFD-TD3-corrigé.pdf", "type": "file", "children": null}, {"name": "PFD-TD3.pdf", "type": "file", "children": null}, {"name": "PFD-TD4-corrigé.pdf", "type": "file", "children": null}, {"name": "PFD-TD4.pdf", "type": "file", "children": null}, {"name": "PFD-TD5-cor.pdf", "type": "file", "children": null}, {"name": "PFD-TD5.pdf", "type": "file", "children": null}, {"name": "PFD-TDL1.pdf", "type": "file", "children": null}, {"name": "PFD-TDL2.pdf", "type": "file", "children": null}, {"name": "tec-TD1-cor.pdf", "type": "file", "children": null}, {"name": "tec-TD1.pdf", "type": "file", "children": null}, {"name": "tec-TD2-cor.pdf", "type": "file", "children": null}, {"name": "tec-TD2.pdf", "type": "file", "children": null}, {"name": "TEC-TD3-corrige.pdf", "type": "file", "children": null}, {"name": "tec-TD3.pdf", "type": "file", "children": null}, {"name": "tec-TD4-corrigé.pdf", "type": "file", "children": null}, {"name": "tec-TD4.pdf", "type": "file", "children": null}]}]}, {"name": "IA", "type": "folder", "children": [{"name": "IA.pdf", "type": "file", "children": null}, {"name": "TD-IA.pdf", "type": "file", "children": null}]}, {"name": "info", "type": "folder", "children": [{"name": "methode_rectangle.py", "type": "file", "children": null}, {"name": "methode_trapezes.py", "type": "file", "children": null}, {"name": "resolution_numerique_synthese.pdf", "type": "file", "children": null}, {"name": "resolution_numerique_TP1.pdf", "type": "file", "children": null}, {"name": "resolution_numerique_TP2.pdf", "type": "file", "children": null}, {"name": "solution_dicho.py", "type": "file", "children": null}, {"name": "solution_newton.py", "type": "file", "children": null}, {"name": "trace_derive.py", "type": "file", "children": null}, {"name": "trace_euler1.py", "type": "file", "children": null}, {"name": "trace_euler2.py", "type": "file", "children": null}]}, {"name": "ORAUX", "type": "folder", "children": [{"name": "moteur brushless", "type": "folder", "children": [{"name": "Brushless DC Motor How it works.mp4", "type": "file", "children": null}, {"name": "Comment un moteur brushless fonctionne.mp4", "type": "file", "children": null}, {"name": "Moteur_Brushless_7.pdf", "type": "file", "children": null}]}, {"name": "moteur cc", "type": "folder", "children": [{"name": "Diapositive 1.swf", "type": "file", "children": null}, {"name": "fixprompt.js", "type": "file", "children": null}, {"name": "index.html", "type": "file", "children": null}, {"name": "MCC-diapos.pdf", "type": "file", "children": null}, {"name": "MCC.ppt", "type": "file", "children": null}]}, {"name": "CCS_2025_PSI.pdf", "type": "file", "children": null}, {"name": "ch1-Outils de répresentation fonctionnelle.pdf", "type": "file", "children": null}, {"name": "ch2-Les capteurs.pdf", "type": "file", "children": null}, {"name": "ch3-Les transmetteurs.pdf", "type": "file", "children": null}, {"name": "Notice_interENS_2025_site.pdf", "type": "file", "children": null}, {"name": "ORAUX PSI.pdf", "type": "file", "children": null}, {"name": "TP-SII-PSI-CCINP.pdf", "type": "file", "children": null}, {"name": "TP-SII-PSI-Mines-Ponts.pdf", "type": "file", "children": null}]}, {"name": "posters", "type": "folder", "children": [{"name": "Poster cinématique.pdf", "type": "file", "children": null}, {"name": "Poster performances des SLCI.pdf", "type": "file", "children": null}, {"name": "poster statique.pdf", "type": "file", "children": null}, {"name": "Poster-slci-bodes.pdf", "type": "file", "children": null}, {"name": "Poster-slci_1.pdf", "type": "file", "children": null}]}, {"name": "revision", "type": "folder", "children": [{"name": "revision-TD0-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD0.pdf", "type": "file", "children": null}, {"name": "revision-TD1-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD1.pdf", "type": "file", "children": null}, {"name": "revision-TD2-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD2.pdf", "type": "file", "children": null}, {"name": "revision-TD3-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD3.pdf", "type": "file", "children": null}, {"name": "revision-TD4-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD4.pdf", "type": "file", "children": null}, {"name": "revision-TD5-cor.pdf", "type": "file", "children": null}, {"name": "revision-TD5.pdf", "type": "file", "children": null}]}, {"name": "SLCI", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "slci2-ch1-modèles_et_leurs_limites.pdf", "type": "file", "children": null}, {"name": "slci2-ch2-corriger_un_systeme_asservi.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "correction-des-asservissements-TD1-cor.pdf", "type": "file", "children": null}, {"name": "correction-des-asservissements-TD1.pdf", "type": "file", "children": null}, {"name": "correction-des-asservissements-TD2-cor.pdf", "type": "file", "children": null}, {"name": "correction-des-asservissements-TD2.pdf", "type": "file", "children": null}, {"name": "correction-des-asservissements-TD3-cor.pdf", "type": "file", "children": null}, {"name": "correction-des-asservissements-TD3.pdf", "type": "file", "children": null}, {"name": "modèle-et-limites-TD1-cor.pdf", "type": "file", "children": null}, {"name": "modèle-et-limites-TD1.pdf", "type": "file", "children": null}]}]}, {"name": "Théorie des mecanismes", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "ch1_schema_cinematique.pdf", "type": "file", "children": null}, {"name": "ch2_chaînes_de_solides.pdf", "type": "file", "children": null}, {"name": "ch3_hyperstatisme.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "hyperstatisme-TD1-cor.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TD1.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TD2-cor.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TD2.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TD3-cor.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TD3.pdf", "type": "file", "children": null}, {"name": "hyperstatisme-TDL.pdf", "type": "file", "children": null}]}]}, {"name": "TP", "type": "folder", "children": [{"name": "TP-serie1", "type": "folder", "children": [{"name": "cordeuse_tp3", "type": "folder", "children": [{"name": "c-cordeuse_modelisation_tp3.zcos", "type": "file", "children": null}, {"name": "cordeuse-TP3-annexes.pdf", "type": "file", "children": null}, {"name": "Cordeuse_TP3.1.pdf", "type": "file", "children": null}, {"name": "Cordeuse_TP3.2.pdf", "type": "file", "children": null}]}, {"name": "drone_tp3", "type": "folder", "children": [{"name": "D2C-TP3-ressources.pdf", "type": "file", "children": null}, {"name": "D2C_boucle_vitesse_acompleter.zcos", "type": "file", "children": null}, {"name": "Drone_TP3.1.pdf", "type": "file", "children": null}, {"name": "Drone_TP3.2.pdf", "type": "file", "children": null}]}, {"name": "volant_tp3", "type": "folder", "children": [{"name": "Assemblage_complet_volantG27.easm", "type": "file", "children": null}, {"name": "Essaidelachevolant.zcos", "type": "file", "children": null}, {"name": "moteurvolant.zcos", "type": "file", "children": null}, {"name": "positionBFvolant.zcos", "type": "file", "children": null}, {"name": "volant-TP3.1.pdf", "type": "file", "children": null}, {"name": "volant-TP3.2.pdf", "type": "file", "children": null}]}]}]}, {"name": "Colloscope PSI RG 2025-2026 semaines 12 a- 25 v1-1.pdf", "type": "file", "children": null}, {"name": "Colloscope PSI RG 2025_2026 semaines 1 à 14 v2.pdf", "type": "file", "children": null}, {"name": "Groupes et trinômes PSI RG 2025-2026.pdf", "type": "file", "children": null}, {"name": "Planning PSI RG 2025_2026 v2.pdf", "type": "file", "children": null}, {"name": "trombi PCSI 2025-26.pdf", "type": "file", "children": null}, {"name": "trombi PSI 2025-26.pdf", "type": "file", "children": null}]}, {"name": "SI PCSI", "type": "folder", "children": [{"name": "Analyse systémique", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "Analyse_fonctionnelle_2021-diapos.pdf", "type": "file", "children": null}, {"name": "ch1-Outils de répresentation fonctionnelle.pdf", "type": "file", "children": null}, {"name": "ch2-Les capteurs.pdf", "type": "file", "children": null}, {"name": "ch3-Les transmetteurs.pdf", "type": "file", "children": null}, {"name": "ingénieurie système-diapos.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "analyse des systemes-TD1-cor.pdf", "type": "file", "children": null}, {"name": "ch1-analyse des systemes-TD1.pdf", "type": "file", "children": null}, {"name": "ch1-analyse des systemes-TD2.pdf", "type": "file", "children": null}, {"name": "ch1-analyse des systemes-TD3.pdf", "type": "file", "children": null}, {"name": "ch1-analyse des systemes-TD3_cor.pdf", "type": "file", "children": null}, {"name": "ch1-analyse des systemes-TDlibre.pdf", "type": "file", "children": null}, {"name": "ch1analyse des systemes-TD2-cor.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td1-corrigé.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td1.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td2-corrigé.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td2.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td3-corrigé.pdf", "type": "file", "children": null}, {"name": "ch3-transformateur td3.pdf", "type": "file", "children": null}]}]}, {"name": "cinématique", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "cinem_ch1_modelisation.pdf", "type": "file", "children": null}, {"name": "cinem_ch2_cinematique-du-point.pdf", "type": "file", "children": null}, {"name": "cinem_ch3_cinematique-du-solide.pdf", "type": "file", "children": null}, {"name": "cinem_ch4_composition-des-mouvements.pdf", "type": "file", "children": null}, {"name": "Poster cinématique.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "ch1_cinem_modeliser-TD1.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TD2.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TD3.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TD3_cor.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TD4-cor.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TD4.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TDL.pdf", "type": "file", "children": null}, {"name": "ch1_cinem_modeliser-TDL2.pdf", "type": "file", "children": null}, {"name": "ch2_vit_et_acc-TD1.pdf", "type": "file", "children": null}, {"name": "ch2_vit_et_acc-TD1_cor.pdf", "type": "file", "children": null}, {"name": "ch2_vit_et_acc-TD2-cor.pdf", "type": "file", "children": null}, {"name": "ch2_vit_et_acc-TD2.pdf", "type": "file", "children": null}, {"name": "ch3_champ_des_vits-TD1.pdf", "type": "file", "children": null}, {"name": "ch3_champ_des_vits-TD2.pdf", "type": "file", "children": null}, {"name": "ch4_composition_des_mouvements-TD1.pdf", "type": "file", "children": null}, {"name": "ch4_composition_des_mouvements-TD2.pdf", "type": "file", "children": null}, {"name": "ch4_composition_des_mouvements-TD3.pdf", "type": "file", "children": null}, {"name": "ch4_composition_des_mouvements-TDL.pdf", "type": "file", "children": null}, {"name": "cinematique-TDS1-cor.pdf", "type": "file", "children": null}, {"name": "cinematique-TDS1.pdf", "type": "file", "children": null}, {"name": "cinematique-TDS2-cor.pdf", "type": "file", "children": null}, {"name": "cinematique-TDS2.pdf", "type": "file", "children": null}]}]}, {"name": "DM", "type": "folder", "children": [{"name": "DM-mai-2025-corrigé.pdf", "type": "file", "children": null}, {"name": "Dm_mai_25.pdf", "type": "file", "children": null}, {"name": "dm_mars_2025-corrige.pdf", "type": "file", "children": null}, {"name": "DM_mars_2025.pdf", "type": "file", "children": null}, {"name": "PCSI-DM-noël-2024-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI-DM-toussaint-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI-DM-toussaint24.pdf", "type": "file", "children": null}, {"name": "PCSI_DM_Noël24.pdf", "type": "file", "children": null}]}, {"name": "DS", "type": "folder", "children": [{"name": "PCSI ds24-1-corrige.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-1.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-2-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-2.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-3-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-3.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-4-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-4.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-5-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-5.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-6-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-6.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-7-CB-corrigé.pdf", "type": "file", "children": null}, {"name": "PCSI ds24-7-CB.pdf", "type": "file", "children": null}]}, {"name": "SED", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "SED_Ch1_codage de l'information.pdf", "type": "file", "children": null}, {"name": "SED_Ch2_Modelisation_des_sytemes_discrets.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "ch1 - codage_de_l'information-TD1.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD2-cor.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD2.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD3-cor.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD3.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD4.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TD5.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TDL.pdf", "type": "file", "children": null}, {"name": "ch1 - codage_de_l'information-TDL2.pdf", "type": "file", "children": null}, {"name": "SED-TD1.pdf", "type": "file", "children": null}, {"name": "SED-TD2-cor.pdf", "type": "file", "children": null}, {"name": "SED-TD2.pdf", "type": "file", "children": null}, {"name": "SED-TD3-corrigé.pdf", "type": "file", "children": null}, {"name": "SED-TD3.pdf", "type": "file", "children": null}]}]}, {"name": "SLCI", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "Poster-slci_1.pdf", "type": "file", "children": null}, {"name": "slci-ch1-présentation.pdf", "type": "file", "children": null}, {"name": "slci-ch2-modélisation.pdf", "type": "file", "children": null}, {"name": "slci-ch3-premier-ordre.pdf", "type": "file", "children": null}, {"name": "slci-ch4-second-ordre.pdf", "type": "file", "children": null}, {"name": "slci-ch5-bouclage.pdf", "type": "file", "children": null}, {"name": "slci-ch6-frequentiel.pdf", "type": "file", "children": null}, {"name": "slci-ch7-performances.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "Ch1_Presentation_SLCI-TD1-corrige.pdf", "type": "file", "children": null}, {"name": "Ch1_Presentation_SLCI-TD1.pdf", "type": "file", "children": null}, {"name": "Ch2-Modélisation des SLCI-TDL.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD1.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD2-corrige.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD2.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD2_corrigé.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD3.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD4-indices.pdf", "type": "file", "children": null}, {"name": "Ch2_Modélisation des SLCI-TD4.pdf", "type": "file", "children": null}, {"name": "Ch3-4_Identification des SLCI-TD1-cor.pdf", "type": "file", "children": null}, {"name": "Ch3-4_Identification des SLCI-TD1.pdf", "type": "file", "children": null}, {"name": "Ch3-4_Modélisation MCC.pdf", "type": "file", "children": null}, {"name": "Ch3-4_SLCI 1er&2nd ordre-TD1-corrigé.pdf", "type": "file", "children": null}, {"name": "Ch3-4_SLCI 1er&2nd ordre-TD1.pdf", "type": "file", "children": null}, {"name": "Ch3-4_SLCI 1er&2nd ordre-TDL.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD1.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD2.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD3-corrigé.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD3.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD4-cor.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TD4.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TDL1.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TDL2.pdf", "type": "file", "children": null}, {"name": "Ch5_SLCI bouclés-TDL3.pdf", "type": "file", "children": null}, {"name": "Ch6-7_performances-corr.pdf", "type": "file", "children": null}, {"name": "Ch6-7_performances.pdf", "type": "file", "children": null}, {"name": "Etude fréquentielle des SLCI-td.pdf", "type": "file", "children": null}, {"name": "Etude fréquentielle des SLCI-tdL-aide.pdf", "type": "file", "children": null}, {"name": "Etude fréquentielle des SLCI-tdL.pdf", "type": "file", "children": null}]}]}, {"name": "statique", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "ch1_modelisation_des_actions_mécaniques.pdf", "type": "file", "children": null}, {"name": "ch2_PFS.pdf", "type": "file", "children": null}, {"name": "ch3_frottements.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "ch1_actions_méca-TD1-cor.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TD1.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TD2-cor.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TD2.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TD3-cor.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TD3.pdf", "type": "file", "children": null}, {"name": "ch1_actions_méca-TDL.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD3-corrigé.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD3.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD4-corrigé.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD4.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD5-corrigé.pdf", "type": "file", "children": null}, {"name": "ch2-PFS-TD5.pdf", "type": "file", "children": null}, {"name": "ch2_PFS-TD1-bis.pdf", "type": "file", "children": null}, {"name": "ch2_PFS-TD1.pdf", "type": "file", "children": null}, {"name": "ch2_PFS-TD2.pdf", "type": "file", "children": null}, {"name": "ch2_PFS-TDL.pdf", "type": "file", "children": null}, {"name": "ch2_PFS-TDL2.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TD1-corrigé.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TD1.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TD2.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TD3.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TD4.pdf", "type": "file", "children": null}, {"name": "ch3_frottements-TDL.pdf", "type": "file", "children": null}]}]}, {"name": "Théorie des mécanismes", "type": "folder", "children": [{"name": "cours", "type": "folder", "children": [{"name": "ch1_schema_cinematique.pdf", "type": "file", "children": null}, {"name": "ch2_chaînes_de_solides.pdf", "type": "file", "children": null}, {"name": "liaisons normalisées.pdf", "type": "file", "children": null}]}, {"name": "td", "type": "folder", "children": [{"name": "commande de soupape", "type": "folder", "children": [{"name": "Came-soupape-1.wmv", "type": "file", "children": null}, {"name": "commande de soupape-diapos.pdf", "type": "file", "children": null}, {"name": "commande de soupape.ppsx", "type": "file", "children": null}, {"name": "commande de soupape.ppt", "type": "file", "children": null}, {"name": "ducati.wmv", "type": "file", "children": null}, {"name": "moteur.wmv", "type": "file", "children": null}, {"name": "Moteur_Renault_M9R_-_UPSTI_.wmv", "type": "file", "children": null}, {"name": "Rotulage.mpg", "type": "file", "children": null}]}, {"name": "perforatrice", "type": "folder", "children": [{"name": "perforatrice-diapo.pdf", "type": "file", "children": null}, {"name": "perforatrice.ppsx", "type": "file", "children": null}, {"name": "perforatrice.ppt", "type": "file", "children": null}]}, {"name": "Borne reglable ensemble.mp4", "type": "file", "children": null}, {"name": "Ch1_mécanisme-TD1.pdf", "type": "file", "children": null}, {"name": "Ch1_mécanisme-TD2.pdf", "type": "file", "children": null}, {"name": "Ch1_mécanisme-TD3.pdf", "type": "file", "children": null}, {"name": "Ch1_mécanisme-TD4.pdf", "type": "file", "children": null}, {"name": "Ch1_mécanisme-TDL.pdf", "type": "file", "children": null}]}]}, {"name": "colloscope-PCSI-Semeste2.pdf", "type": "file", "children": null}, {"name": "colloscope-pcsi.pdf", "type": "file", "children": null}, {"name": "Initiation aux méthodes du TIPE.pdf", "type": "file", "children": null}, {"name": "PCSI-2024-25-centrale-EDF-2.pdf", "type": "file", "children": null}, {"name": "PCSI-2024-25-centrale-EDF.pdf", "type": "file", "children": null}, {"name": "Planning DS PCSI 24-25.pdf", "type": "file", "children": null}, {"name": "prog-colles-12.pdf", "type": "file", "children": null}, {"name": "pySyLiC.zip", "type": "file", "children": null}, {"name": "trombi PCSI 2024-25.pdf", "type": "file", "children": null}, {"name": "trombi PSI 2024-25.pdf", "type": "file", "children": null}]}, {"name": "Projection Progression des enseignements de Sc. Phys. en PSI année 2025-2026 - Feuille 1.pdf", "type": "file", "children": null}, {"name": "Semainier PSI 2025 2026.pdf", "type": "file", "children": null}]};
+
+/* ---------- icônes & typage de fichiers ---------- */
+const ICONS = {
+  folder: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h4.086a1 1 0 0 1 .707.293l1.414 1.414A1 1 0 0 0 12.414 6H18.5A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11z"/></svg>',
+  pdf:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+  doc:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>',
+  sheet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="21"/></svg>',
+  slide: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+  image: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.7"/><path d="M21 15l-5-5L5 21"/></svg>',
+  video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></svg>',
+  audio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
+  code:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+  zip:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-2-2h-6l-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/><line x1="12" y1="6" x2="12" y2="20" stroke-dasharray="2 2"/></svg>',
+  file:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+};
+const TYPES = {
+  pdf:  {icon:'pdf',   color:'#d64545', bg:'#fdecec', label:'PDF'},
+  doc:  {icon:'doc',   color:'#2f6fd6', bg:'#e9f0fd', label:'Word'},
+  docx: {icon:'doc',   color:'#2f6fd6', bg:'#e9f0fd', label:'Word'},
+  odt:  {icon:'doc',   color:'#2f6fd6', bg:'#e9f0fd', label:'Doc'},
+  ods:  {icon:'sheet', color:'#1f9e5c', bg:'#e9f9ef', label:'Tableur'},
+  xlsx: {icon:'sheet', color:'#1f9e5c', bg:'#e9f9ef', label:'Tableur'},
+  csv:  {icon:'sheet', color:'#1f9e5c', bg:'#e9f9ef', label:'CSV'},
+  ppt:  {icon:'slide', color:'#d67a1f', bg:'#fdf1e5', label:'Slides'},
+  pptx: {icon:'slide', color:'#d67a1f', bg:'#fdf1e5', label:'Slides'},
+  ppsx: {icon:'slide', color:'#d67a1f', bg:'#fdf1e5', label:'Slides'},
+  jpg:  {icon:'image', color:'#a13fc4', bg:'#f6ecfb', label:'Image'},
+  jpeg: {icon:'image', color:'#a13fc4', bg:'#f6ecfb', label:'Image'},
+  png:  {icon:'image', color:'#a13fc4', bg:'#f6ecfb', label:'Image'},
+  mp4:  {icon:'video', color:'#3f4dd6', bg:'#ececfd', label:'Vidéo'},
+  avi:  {icon:'video', color:'#3f4dd6', bg:'#ececfd', label:'Vidéo'},
+  wmv:  {icon:'video', color:'#3f4dd6', bg:'#ececfd', label:'Vidéo'},
+  mpg:  {icon:'video', color:'#3f4dd6', bg:'#ececfd', label:'Vidéo'},
+  mp3:  {icon:'audio', color:'#c47a1f', bg:'#fdf1e2', label:'Audio'},
+  py:   {icon:'code',  color:'#1f7a8c', bg:'#e6f4f6', label:'Python'},
+  js:   {icon:'code',  color:'#1f7a8c', bg:'#e6f4f6', label:'Code'},
+  html: {icon:'code',  color:'#1f7a8c', bg:'#e6f4f6', label:'Code'},
+  zip:  {icon:'zip',   color:'#6b6f7a', bg:'#eef0f3', label:'Archive'},
+};
+function typeFor(filename){
+  const ext = filename.split('.').pop().toLowerCase();
+  return TYPES[ext] || {icon:'file', color:'#6b6f7a', bg:'#eef0f3', label:ext.toUpperCase()};
+}
+
+/* ---------- état ---------- */
+let path = [];       // ex: ["Mathématiques","Cours"]
+let view = 'list';
+let query = '';
+
+function getNode(p){
+  let node = MANIFEST;
+  for(const seg of p){
+    node = node.children.find(c => c.name === seg);
+    if(!node) return null;
+  }
+  return node;
+}
+
+function folderStats(node){
+  let files=0, folders=0;
+  for(const c of node.children){
+    if(c.type==='folder'){ folders++; const s=folderStats(c); files+=s.files; folders+=s.folders; }
+    else files++;
+  }
+  return {files, folders};
+}
+
+function searchAll(q){
+  const results = [];
+  const lower = q.toLowerCase();
+  function walk(node, trail){
+    for(const c of node.children){
+      if(c.name.toLowerCase().includes(lower)){
+        results.push({node:c, trail});
+      }
+      if(c.type==='folder') walk(c, [...trail, c.name]);
+    }
+  }
+  walk(MANIFEST, []);
+  return results;
+}
+
+function encodePath(p){
+  return p.map(encodeURIComponent).join('/');
+}
+
+/* ---------- rendu ---------- */
+const crumbsEl = document.getElementById('crumbs');
+const contentEl = document.getElementById('content');
+const countEl = document.getElementById('countLabel');
+
+function renderCrumbs(){
+  crumbsEl.innerHTML = '';
+  const home = document.createElement('button');
+  home.textContent = 'Accueil';
+  home.onclick = () => { path = []; query=''; document.getElementById('search').value=''; render(); };
+  if(path.length===0) home.className='current';
+  crumbsEl.appendChild(home);
+
+  path.forEach((seg, i) => {
+    const sep = document.createElement('span');
+    sep.className='sep'; sep.textContent='/';
+    crumbsEl.appendChild(sep);
+    const btn = document.createElement('button');
+    btn.textContent = seg;
+    if(i === path.length-1) btn.className='current';
+    btn.onclick = () => { path = path.slice(0, i+1); render(); };
+    crumbsEl.appendChild(btn);
+  });
+}
+
+function iconHTML(type, colorBg, color){
+  return `<div class="icon" style="background:${colorBg};color:${color}">${ICONS[type]}</div>`;
+}
+
+function rowFolder(node, trailPath){
+  const stats = folderStats(node);
+  const el = document.createElement('div');
+  el.className='row';
+  el.innerHTML = `
+    ${iconHTML('folder', '#fdf1de', '#c9861f')}
+    <div class="name">
+      <div class="n">${node.name}</div>
+      <div class="p">${stats.folders} dossier${stats.folders!==1?'s':''} · ${stats.files} fichier${stats.files!==1?'s':''}</div>
+    </div>
+    <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 6 15 12 9 18"/></svg>
+  `;
+  el.onclick = () => { path = trailPath; query=''; document.getElementById('search').value=''; render(); };
+  return el;
+}
+
+function rowFile(node, trailPath){
+  const t = typeFor(node.name);
+  const el = document.createElement('div');
+  el.className='row';
+  const href = 'data/' + encodePath([...trailPath, node.name]);
+  el.innerHTML = `
+    ${iconHTML(t.icon, t.bg, t.color)}
+    <div class="name"><div class="n">${node.name}</div></div>
+    <div class="badge">${t.label}</div>
+    <a class="dl" href="${href}" download title="Télécharger" onclick="event.stopPropagation()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg>
+    </a>
+  `;
+  el.onclick = (e) => { if(e.target.closest('.dl')) return; window.location.href = href; };
+  return el;
+}
+
+function cardFolder(node, trailPath){
+  const stats = folderStats(node);
+  const el = document.createElement('div');
+  el.className='card';
+  el.innerHTML = `
+    <div class="icon" style="width:46px;height:46px;background:#fdf1de;color:#c9861f;border-radius:11px;">${ICONS.folder}</div>
+    <div class="n">${node.name}</div>
+    <div class="meta">${stats.files} fichier${stats.files!==1?'s':''}</div>
+  `;
+  el.onclick = () => { path = trailPath; query=''; document.getElementById('search').value=''; render(); };
+  return el;
+}
+
+function cardFile(node, trailPath){
+  const t = typeFor(node.name);
+  const href = 'data/' + encodePath([...trailPath, node.name]);
+  const el = document.createElement('div');
+  el.className='card';
+  el.innerHTML = `
+    <div class="icon" style="width:46px;height:46px;background:${t.bg};color:${t.color};border-radius:11px;">${ICONS[t.icon]}</div>
+    <div class="n">${node.name}</div>
+    <div class="meta">${t.label}</div>
+  `;
+  el.onclick = () => window.location.href = href;
+  return el;
+}
+
+function emptyState(msg){
+  const el = document.createElement('div');
+  el.className='empty';
+  el.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <p>${msg}</p>`;
+  return el;
+}
+
+function render(){
+  renderCrumbs();
+  contentEl.innerHTML = '';
+
+  if(query.trim().length > 0){
+    const results = searchAll(query.trim());
+    countEl.textContent = `${results.length} résultat${results.length!==1?'s':''}`;
+    if(results.length === 0){
+      contentEl.appendChild(emptyState('Aucun résultat pour cette recherche.'));
+      return;
+    }
+    const wrap = document.createElement('div'); wrap.className = view==='grid' ? 'grid' : 'list';
+    results.forEach(({node, trail}) => {
+      let rowEl;
+      if(view==='grid'){
+        rowEl = node.type==='folder' ? cardFolder(node, [...trail, node.name]) : cardFile(node, trail);
+      } else {
+        rowEl = node.type==='folder' ? rowFolder(node, [...trail, node.name]) : rowFile(node, trail);
+        // show path hint under name for search results
+        const p = rowEl.querySelector('.name');
+        if(p && trail.length){
+          const hint = document.createElement('div');
+          hint.className='p'; hint.textContent = trail.join(' / ');
+          p.appendChild(hint);
+        }
+      }
+      wrap.appendChild(rowEl);
+    });
+    contentEl.appendChild(wrap);
+    return;
+  }
+
+  const node = getNode(path);
+  if(!node){ path = []; return render(); }
+  const stats = folderStats(node);
+  countEl.textContent = `${stats.folders} dossier${stats.folders!==1?'s':''} · ${stats.files} fichier${stats.files!==1?'s':''}`;
+
+  if(node.children.length === 0){
+    contentEl.appendChild(emptyState('Ce dossier est vide.'));
+    return;
+  }
+
+  const wrap = document.createElement('div'); wrap.className = view==='grid' ? 'grid' : 'list';
+  node.children.forEach(c => {
+    const trail = [...path, c.name];
+    let el;
+    if(view==='grid'){
+      el = c.type==='folder' ? cardFolder(c, trail) : cardFile(c, path);
+    } else {
+      el = c.type==='folder' ? rowFolder(c, trail) : rowFile(c, path);
+    }
+    wrap.appendChild(el);
+  });
+  contentEl.appendChild(wrap);
+}
+
+/* ---------- events ---------- */
+document.getElementById('search').addEventListener('input', (e) => {
+  query = e.target.value;
+  render();
+});
+document.getElementById('viewToggle').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  view = btn.dataset.view;
+  [...document.getElementById('viewToggle').children].forEach(b => b.classList.toggle('active', b===btn));
+  render();
+});
+
+render();
+</script>
+</body>
+</html>
