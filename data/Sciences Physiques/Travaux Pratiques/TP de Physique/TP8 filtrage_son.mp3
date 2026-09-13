@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <title>Documents à télécharger - Sciences Physiques</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css?v=1202">
+  <link rel="stylesheet" href="css/icones.min.css?v=1200">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/commun.min.js?v=1200"></script>
+  <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="rss/2b54389f71f0ecd21119/rss.xml">
+</head>
+<body data-csrf-token="637a8ca45f2cf430ae5ef5a5c1ab40114a8b8ca6d9a35b3617e44409dbd69805">
+
+<header><h1>Documents à télécharger - Sciences Physiques</h1></header>
+
+<nav>
+  <div id="iconesmenu">
+    <a class="icon-menu" title="Afficher le menu"></a>
+    <a class="icon-accueil" href="." title="Revenir à la page d'accueil"></a>
+    <a class="icon-recent" href="recent" title="Voir les 5 nouveaux contenus">5</a>
+    <a class="icon-rep" id="actuel2" href="docs" title="Voir les documents à télécharger"></a>
+    <a class="icon-progcolles" href="progcolles" title="Voir les programmes de colles"></a>
+    <a class="icon-agenda" href="agenda" title="Voir l'agenda"></a>
+    <a class="icon-mail" href="mail" title="Envoyer un mail"></a>
+    <a class="icon-transfert" href="transferts" title="Transférer des documents"></a>
+    <a class="icon-notescolles" href="notescolles" title="Consulter les notes de colles"></a>
+    <a class="icon-deconnexion" title="Se déconnecter"></a>
+  </div>
+  <div id="menu">
+    <hr>
+    <a href="docs?general"><span class="icon-rep"></span>&nbsp;Documents généraux</a>
+     <h3>Mathématiques</h3>
+    <a href="progcolles?math"><span class="icon-progcolles"></span>&nbsp;Programme de colles</a>
+    <a href="docs?math"><span class="icon-rep"></span>&nbsp;Documents à télécharger</a>
+    <a href="cdt?math"><span class="icon-cdt"></span>&nbsp;Cahier de texte</a>
+    <a href="transferts?math"><span class="icon-transfert"></span>&nbsp;Transfert de documents</a>
+    <a href="notescolles?math"><span class="icon-notescolles"></span>&nbsp;Notes de colles</a>
+    <h3>Sciences Physiques</h3>
+    <a href="progcolles?phys"><span class="icon-progcolles"></span>&nbsp;Programme de colles</a>
+    <a id="actuel" href="docs?phys"><span class="icon-rep"></span>&nbsp;Documents à télécharger</a>
+    <a class="menurep" href="docs?rep=6">Cours et TD</a>
+    <a class="menurep" href="docs?rep=3">Devoir Maison</a>
+    <a class="menurep" href="docs?rep=4">Devoirs Surveillés</a>
+    <a class="menurep" href="docs?rep=13">Fiches outils et conseils</a>
+    <a class="menurep" href="docs?rep=5">Interrogations</a>
+    <a class="menurep" href="docs?rep=22">Ressources TIPE</a>
+    <a class="menurep" href="docs?rep=29">Sujets Blancs</a>
+    <a class="menurep" href="docs?rep=14">Sujets de Kholles PSI</a>
+    <a class="menurep" href="docs?rep=8">TIPE</a>
+    <a class="menurep" href="docs?rep=7">Travaux Pratiques</a>
+    <a href="notescolles?phys"><span class="icon-notescolles"></span>&nbsp;Notes de colles</a>
+    <hr>
+    <a href="prefs"><span class="icon-prefs"></span>&nbsp;Mes préférences</a>
+    <a href="blogcdp"><span class="icon-messages"></span>&nbsp;Le blog de CdP</a>
+  </div>
+</nav>
+
+<section>
+  <article class="centre">
+    <audio src="download?id=146&amp;v=9c230&amp;inline" type="audio/mpeg" controls>Votre navigateur n'affiche pas les fichiers audio en HTML5.</video>
+  </article>
+
+  <article>
+    <h4>Détails du document</h4>
+    <p><strong>Titre</strong>&nbsp;: TP8 filtrage_son</p>
+    <p><strong>Taille</strong>&nbsp;: 3&nbsp;Mo</p>
+    <p><strong>Publication</strong>&nbsp;: Dimanche 5 octobre 2025</p>
+    <p class="centre"><a class="icon-download" href="download?id=146&amp;v=9c230&amp;dl" title="Télécharger ce document"></a></p>
+  </article>
+
+</section>
+
+<footer>Ce site est réalisé par le logiciel <a href="https://cahier-de-prepa.fr">Cahier de prépa</a>, publié sous <a href="Licence_CeCILL_V2-fr.html">licence libre</a>.&nbsp;<span class="icon-theme" title="Changer le thème lumineux/sombre"></span>&nbsp;<a class="icon-python" href="/basthon" title="Coder en Python directement dans votre navigateur"></a></footer>
+
+<div id="load"><img src="js/ajax-loader.gif"></div>
+<script type="text/javascript" src="js/lecture.min.js?v=1210"></script>
+
+<script type="text/javascript" src="/zfiles/mtm.min.js"></script>
+</body>
+</html>

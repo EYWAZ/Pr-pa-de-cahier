@@ -1,0 +1,2023 @@
+data/
+├── Général/
+│   ├── Calendrier concours (inscription et épreuves) session 2026.pdf
+│   ├── Colloscope PSI RG 20252026 semaines 1 à 14 v7.pdf
+│   ├── Colloscope PSI RG 20252026 semaines 12 à 25 v3.pdf
+│   ├── EDT PSI 2025 2026.pdf
+│   ├── Groupes et trinômes PSI RG 2025-2026 v3 ( à compter de la semaine 15).pdf
+│   ├── Groupes et trinômes PSI RG 2025-2026.pdf
+│   ├── Planning CB PSI RG 2025-2026.pdf
+│   ├── Planning préparation oraux mai-juin 2026 v2.ods
+│   ├── Planning PSI RG 2025_2026.pdf
+│   ├── Presentation 2025 BCPST et PSI.pdf
+│   ├── Presentation 2025 BCPST et PSI.pptx
+│   └── trombi PSI 2025-26.pdf
+├── Logiciels/
+│   ├── Eurosmart/
+│   │   ├── LatisPro/
+│   │   │   ├── Aide/
+│   │   │   │   ├── Aide LatisPro_ARA.chm
+│   │   │   │   ├── Aide LatisPro_ENU.chm
+│   │   │   │   └── Aide LatisPro_FRA.chm
+│   │   │   ├── Data/
+│   │   │   │   ├── ARA/
+│   │   │   │   │   └── Etalonnage/
+│   │   │   │   │       ├── COLOR - Etape 1_ARA.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── DEBIM-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── DEBIM3 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── PENDULE - Etape 1_ARA.rtf
+│   │   │   │   │       ├── PENDULE - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TCM-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TCM2 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TCM3 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TCODA-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TCODA3 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TCODAE-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TESLA-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TOXA - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TOXA-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM mode CO2 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM-J1 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM-V6 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 3_ARA.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 1_ARA.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 2_ARA.rtf
+│   │   │   │   │       ├── TPHM3 - Etape 1_ARA.rtf
+│   │   │   │   │       └── TPHM3 - Etape 2_ARA.rtf
+│   │   │   │   ├── Capteurs/
+│   │   │   │   │   ├── MCE/
+│   │   │   │   │   ├── PCE/
+│   │   │   │   │   │   ├── ACC3 (328).PCE
+│   │   │   │   │   │   ├── ACC3 (584).PCE
+│   │   │   │   │   │   ├── ACHU2 (269).PCE
+│   │   │   │   │   │   ├── ACHU2 (525).PCE
+│   │   │   │   │   │   ├── ACP3 (300).PCE
+│   │   │   │   │   │   ├── ACP3 (556).PCE
+│   │   │   │   │   │   ├── ASON-J1 (43).PCE
+│   │   │   │   │   │   ├── ASON-V6 (1067).PCE
+│   │   │   │   │   │   ├── ASON-V6 (811).PCE
+│   │   │   │   │   │   ├── ASON3 (301).PCE
+│   │   │   │   │   │   ├── ASON3 (557).PCE
+│   │   │   │   │   │   ├── CCOP-V6 (806).PCE
+│   │   │   │   │   │   ├── CCOP3 (265).PCE
+│   │   │   │   │   │   ├── CCOP3 (521).PCE
+│   │   │   │   │   │   ├── CCTB2 (286).PCE
+│   │   │   │   │   │   ├── CCTB2 (542).PCE
+│   │   │   │   │   │   ├── CCTU2 (287).PCE
+│   │   │   │   │   │   ├── CCTU2 (543).PCE
+│   │   │   │   │   │   ├── CH-J1 (53).PCE
+│   │   │   │   │   │   ├── CH-V6 (821).PCE
+│   │   │   │   │   │   ├── CH2 (261).PCE
+│   │   │   │   │   │   ├── CH2 (517).PCE
+│   │   │   │   │   │   ├── CH3 (320).PCE
+│   │   │   │   │   │   ├── CH3 (576).PCE
+│   │   │   │   │   │   ├── CL10k-J1 (37).PCE
+│   │   │   │   │   │   ├── CL10k-V6 (805).PCE
+│   │   │   │   │   │   ├── CL2 (258).PCE
+│   │   │   │   │   │   ├── CL2 (514).PCE
+│   │   │   │   │   │   ├── CL3-10K (322).PCE
+│   │   │   │   │   │   ├── CL3-10K (578).PCE
+│   │   │   │   │   │   ├── CL5k-J1 (49).PCE
+│   │   │   │   │   │   ├── COLOR2 - COLOR3 (297).PCE
+│   │   │   │   │   │   ├── COLOR2 - COLOR3 (553).PCE
+│   │   │   │   │   │   ├── COLORIM-V6 (1064).PCE
+│   │   │   │   │   │   ├── COLORIM-V6 (808).PCE
+│   │   │   │   │   │   ├── CPA2-2 (274).PCE
+│   │   │   │   │   │   ├── CPA2-2 (530).PCE
+│   │   │   │   │   │   ├── CPA2-J1 (50).PCE
+│   │   │   │   │   │   ├── CPA2-V6 (818).PCE
+│   │   │   │   │   │   ├── CPD2-0.5 (275).PCE
+│   │   │   │   │   │   ├── CPD2-0.5 (531).PCE
+│   │   │   │   │   │   ├── CPD2-1 (276).PCE
+│   │   │   │   │   │   ├── CPD2-1 (532).PCE
+│   │   │   │   │   │   ├── CPD2-2 (277).PCE
+│   │   │   │   │   │   ├── CPD2-2 (533).PCE
+│   │   │   │   │   │   ├── CPR01-V6 (819).PCE
+│   │   │   │   │   │   ├── CPR2-0.5 (278).PCE
+│   │   │   │   │   │   ├── CPR2-0.5 (534).PCE
+│   │   │   │   │   │   ├── CPR2-1 (279).PCE
+│   │   │   │   │   │   ├── CPR2-1 (535).PCE
+│   │   │   │   │   │   ├── CPR2-2 (280).PCE
+│   │   │   │   │   │   ├── CPR2-2 (536).PCE
+│   │   │   │   │   │   ├── CPR3-01 (281).PCE
+│   │   │   │   │   │   ├── CPR3-01 (537).PCE
+│   │   │   │   │   │   ├── DCA2 (268).PCE
+│   │   │   │   │   │   ├── DCA2 (524).PCE
+│   │   │   │   │   │   ├── DEBIM-J1 (59).PCE
+│   │   │   │   │   │   ├── DEBIM-V6 (827).PCE
+│   │   │   │   │   │   ├── DEBIM3 (273).PCE
+│   │   │   │   │   │   ├── DEBIM3 (529).PCE
+│   │   │   │   │   │   ├── ECG-J1 (46).PCE
+│   │   │   │   │   │   ├── ECG-J1 (47).PCE
+│   │   │   │   │   │   ├── ECG3 (299).PCE
+│   │   │   │   │   │   ├── ECG3 (555).PCE
+│   │   │   │   │   │   ├── ECGPHY-V6 (1592).PCE
+│   │   │   │   │   │   ├── ECGPHY-V6 (824).PCE
+│   │   │   │   │   │   ├── EPHY-J1 (56).PCE
+│   │   │   │   │   │   ├── EPHY3 (298).PCE
+│   │   │   │   │   │   ├── EPHY3 (554).PCE
+│   │   │   │   │   │   ├── M_SETHAN3 (510).PCE
+│   │   │   │   │   │   ├── M_SETHAN3 (766).PCE
+│   │   │   │   │   │   ├── PENDULE2 (270).PCE
+│   │   │   │   │   │   ├── PENDULE2 (526).PCE
+│   │   │   │   │   │   ├── PENDULE3 (310).PCE
+│   │   │   │   │   │   ├── PENDULE3 (566).PCE
+│   │   │   │   │   │   ├── SISMO-V6 (807).PCE
+│   │   │   │   │   │   ├── SISMO3 (271).PCE
+│   │   │   │   │   │   ├── SISMO3 (527).PCE
+│   │   │   │   │   │   ├── ST-J1 (42).PCE
+│   │   │   │   │   │   ├── ST-V6 (810).PCE
+│   │   │   │   │   │   ├── ST2 (257).PCE
+│   │   │   │   │   │   ├── ST2 (513).PCE
+│   │   │   │   │   │   ├── TAMP-J1 (60).PCE
+│   │   │   │   │   │   ├── TAMP01-J1 (61).PCE
+│   │   │   │   │   │   ├── TAMP05_5-V6 (1341).PCE
+│   │   │   │   │   │   ├── TAMP05_5-V6 (829).PCE
+│   │   │   │   │   │   ├── TAMP2-0.5 (293).PCE
+│   │   │   │   │   │   ├── TAMP2-0.5 (549).PCE
+│   │   │   │   │   │   ├── TAMP2-5 (295).PCE
+│   │   │   │   │   │   ├── TAMP2-5 (551).PCE
+│   │   │   │   │   │   ├── TAMP3-0.1 (294).PCE
+│   │   │   │   │   │   ├── TAMP3-0.1 (550).PCE
+│   │   │   │   │   │   ├── TAMP5-V6 (828).PCE
+│   │   │   │   │   │   ├── TCM-V6 (1057).PCE
+│   │   │   │   │   │   ├── TCM-V6 (801).PCE
+│   │   │   │   │   │   ├── TCM2 - TCM3 (288).PCE
+│   │   │   │   │   │   ├── TCM2 - TCM3 (544).PCE
+│   │   │   │   │   │   ├── TCOD3 (305).PCE
+│   │   │   │   │   │   ├── TCOD3 (561).PCE
+│   │   │   │   │   │   ├── TCODA-V6 (1338).PCE
+│   │   │   │   │   │   ├── TCODA-V6 (826).PCE
+│   │   │   │   │   │   ├── TCODA3 (306).PCE
+│   │   │   │   │   │   ├── TCODA3 (562).PCE
+│   │   │   │   │   │   ├── TCODAE-V6 (1087)_FRA.PCE
+│   │   │   │   │   │   ├── TCODAE-V6 (831)_FRA.PCE
+│   │   │   │   │   │   ├── TENS-V6 (1072).PCE
+│   │   │   │   │   │   ├── TENS-V6 (816).PCE
+│   │   │   │   │   │   ├── TENS3 (307).PCE
+│   │   │   │   │   │   ├── TENS3 (563).PCE
+│   │   │   │   │   │   ├── TESLA-J1 (44).PCE
+│   │   │   │   │   │   ├── TESLA-J1 (45).PCE
+│   │   │   │   │   │   ├── TESLA-V6 (812).PCE
+│   │   │   │   │   │   ├── TESLA2 (259).PCE
+│   │   │   │   │   │   ├── TESLA2 (515).PCE
+│   │   │   │   │   │   ├── TESLA3 (308).PCE
+│   │   │   │   │   │   ├── TESLA3 (309).PCE
+│   │   │   │   │   │   ├── TESLA3 (564).PCE
+│   │   │   │   │   │   ├── TESLA3 (565).PCE
+│   │   │   │   │   │   ├── TESLA4 (314).PCE
+│   │   │   │   │   │   ├── TESLA4 (315).PCE
+│   │   │   │   │   │   ├── TESLA4 (570).PCE
+│   │   │   │   │   │   ├── TESLA4 (571).PCE
+│   │   │   │   │   │   ├── TETHAN-V6 (1335).PCE
+│   │   │   │   │   │   ├── TETHAN-V6 (823).PCE
+│   │   │   │   │   │   ├── TETHAN3 (326).PCE
+│   │   │   │   │   │   ├── TETHAN3 (327).PCE
+│   │   │   │   │   │   ├── TETHAN3 (582).PCE
+│   │   │   │   │   │   ├── TETHAN3 (583).PCE
+│   │   │   │   │   │   ├── TFOR-V6 (1060).PCE
+│   │   │   │   │   │   ├── TFOR-V6 (804).PCE
+│   │   │   │   │   │   ├── TOCLA-J1 (40).PCE
+│   │   │   │   │   │   ├── TOCLA-J1 (41).PCE
+│   │   │   │   │   │   ├── TOCLA-V6 (1321).PCE
+│   │   │   │   │   │   ├── TOCLA-V6 (1833).PCE
+│   │   │   │   │   │   ├── TOCLA3 (302).PCE
+│   │   │   │   │   │   ├── TOCLA3 (303).PCE
+│   │   │   │   │   │   ├── TOCLA3 (558).PCE
+│   │   │   │   │   │   ├── TOCLA3 (559).PCE
+│   │   │   │   │   │   ├── TOXA-J1 (57).PCE
+│   │   │   │   │   │   ├── TOXA-V6 (825).PCE
+│   │   │   │   │   │   ├── TOXA2 (262).PCE
+│   │   │   │   │   │   ├── TOXA2 (518).PCE
+│   │   │   │   │   │   ├── TOXAE2 (263).PCE
+│   │   │   │   │   │   ├── TOXAE2 (519).PCE
+│   │   │   │   │   │   ├── TPHM-J1 (52).PCE
+│   │   │   │   │   │   ├── TPHM-V6 (1076).PCE
+│   │   │   │   │   │   ├── TPHM-V6 (820).PCE
+│   │   │   │   │   │   ├── TPHM2 (260).PCE
+│   │   │   │   │   │   ├── TPHM2 (516).PCE
+│   │   │   │   │   │   ├── TPHM3 (304).PCE
+│   │   │   │   │   │   ├── TPHM3 (560).PCE
+│   │   │   │   │   │   ├── TPJ2 - TPJ3 (272).PCE
+│   │   │   │   │   │   ├── TPJ2 - TPJ3 (528).PCE
+│   │   │   │   │   │   ├── TPT2 (267).PCE
+│   │   │   │   │   │   ├── TPT2 (523).PCE
+│   │   │   │   │   │   ├── TTCK2 (266).PCE
+│   │   │   │   │   │   ├── TTCK2 (522).PCE
+│   │   │   │   │   │   ├── TVOLT-J1 (62).PCE
+│   │   │   │   │   │   ├── TVOLT2-30 (289).PCE
+│   │   │   │   │   │   ├── TVOLT2-30 (545).PCE
+│   │   │   │   │   │   └── TVOLT2-V6 (830).PCE
+│   │   │   │   │   └── PCU/
+│   │   │   │   ├── ENU/
+│   │   │   │   │   └── Etalonnage/
+│   │   │   │   │       ├── COLOR - Etape 1_ENU.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 2_ENU.rtf
+│   │   │   │   │       ├── DEBIM-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── DEBIM3 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── PENDULE - Etape 1_ENU.rtf
+│   │   │   │   │       ├── PENDULE - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TCM-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TCM2 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TCM3 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TCODA-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TCODA3 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TCODAE-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TESLA-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TOXA - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TOXA-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TPHM mode CO2 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TPHM-V6 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 2_ENU.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 3_ENU.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 1_ENU.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 2_ENU.rtf
+│   │   │   │   │       └── TPHM3 - Etape 1_ENU.rtf
+│   │   │   │   ├── Etalonnage cpt_V6/
+│   │   │   │   │   ├── CCOP-V6 (806).ec6
+│   │   │   │   │   ├── DEBIM-V6 (827).ec6
+│   │   │   │   │   ├── TCODA-V6 (826).ec6
+│   │   │   │   │   ├── TCODAE-V6 (1087).ec6
+│   │   │   │   │   ├── TCODAE-V6 (831).ec6
+│   │   │   │   │   ├── TESLA-V6 (812).ec6
+│   │   │   │   │   ├── TETHAN-V6 (823).ec6
+│   │   │   │   │   ├── TFOR-V6 (1060).ec6
+│   │   │   │   │   ├── TFOR-V6 (804).ec6
+│   │   │   │   │   ├── TOCLA-V6 (1321).ec6
+│   │   │   │   │   ├── TOCLA-V6 (1833).ec6
+│   │   │   │   │   ├── TOXA-V6 (825).ec6
+│   │   │   │   │   ├── TPHM-V6 (1076).ec6
+│   │   │   │   │   └── TPHM-V6 pH (820).ec6
+│   │   │   │   ├── FRA/
+│   │   │   │   │   └── Etalonnage/
+│   │   │   │   │       ├── COLOR - Etape 1_FRA.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── CPJ01 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── DEBIM-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── DEBIM3 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── PENDULE - Etape 1_FRA.rtf
+│   │   │   │   │       ├── PENDULE - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TCM-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TCM2 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TCM3 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TCODA-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TCODA3 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TCODAE-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TESLA-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TETHAN-V6 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TETHAN3 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TFOR-V6 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TOCLA-V6 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TOXA - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TOXA-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM mode CO2 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM-J1 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM-V6 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TPHM-V6 pH - Etape 3_FRA.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 1_FRA.rtf
+│   │   │   │   │       ├── TPHM2 - Etape 2_FRA.rtf
+│   │   │   │   │       ├── TPHM3 - Etape 1_FRA.rtf
+│   │   │   │   │       └── TPHM3 - Etape 2_FRA.rtf
+│   │   │   │   ├── Options/
+│   │   │   │   │   ├── LatisPro.cfg
+│   │   │   │   │   ├── LatisPro.cfl
+│   │   │   │   │   ├── LatisPro.chr
+│   │   │   │   │   ├── LatisPro.lng
+│   │   │   │   │   ├── LatisPro.opt
+│   │   │   │   │   ├── LatisPro.snr
+│   │   │   │   │   └── LatisPro_Prof.opt
+│   │   │   │   ├── Unites/
+│   │   │   │   │   ├── MUE/
+│   │   │   │   │   ├── PUE/
+│   │   │   │   │   │   ├── {00000000-0000-0000-0000-000000000000} - Aucune -.PUE
+│   │   │   │   │   │   ├── {06546A82-1E7C-49D0-9C4B-BC7BF5F468CB} Radian.PUE
+│   │   │   │   │   │   ├── {0B40F490-1268-4841-8022-0945716C5EA8} Hertz.PUE
+│   │   │   │   │   │   ├── {0C262A38-470A-4FDA-9FCA-F0AA9FD998F7} Débit.PUE
+│   │   │   │   │   │   ├── {0C6CFC87-6A5A-4B6E-9F0B-2F381F367EAE} Mètre carré.PUE
+│   │   │   │   │   │   ├── {16439F4B-DD55-433F-B566-69E3E74738C2} Farad.PUE
+│   │   │   │   │   │   ├── {18E0A5AC-0F45-4DF9-A1C0-5F26DA410842} Vitesse de rotation.PUE
+│   │   │   │   │   │   ├── {23A25C48-3359-4CEF-86F6-5D8ED64493D2} Intensité respiratoire.PUE
+│   │   │   │   │   │   ├── {291BC8D9-EBAE-4B73-BBD4-F722872A7313} Siemens.PUE
+│   │   │   │   │   │   ├── {395567C6-09D3-43F5-95E1-36A19F1C2A00} Ohm.PUE
+│   │   │   │   │   │   ├── {414DC6E1-054A-48A6-AA4F-221D712E47E5} Concentration.PUE
+│   │   │   │   │   │   ├── {416AB04E-A6B7-49B0-A941-3A70530D4106} Intensité respiratoire.PUE
+│   │   │   │   │   │   ├── {475D5BB1-D856-44A4-9E0C-1BA97BCB7AED} Accélération.PUE
+│   │   │   │   │   │   ├── {5086296C-0903-4202-B9A9-74EEAD8AFF41} Degré angulaire.PUE
+│   │   │   │   │   │   ├── {55085DD2-D0DE-448E-8EBA-DD1288B266A0} Kelvin.PUE
+│   │   │   │   │   │   ├── {566FDDC9-57E6-49C4-B922-EC769D1BD5EE} Décibel.PUE
+│   │   │   │   │   │   ├── {5D825BB5-3B48-40F2-8CB6-E30F94BC951E} Vitesse.PUE
+│   │   │   │   │   │   ├── {6245D103-9407-43B0-BF71-B5F1AD594A04} Bar.PUE
+│   │   │   │   │   │   ├── {63FE40E7-D556-46B9-983E-9C320EF63A63} Newton.PUE
+│   │   │   │   │   │   ├── {65C8BAB9-603E-4C67-9A1D-0A405DB07813} Vitesse.PUE
+│   │   │   │   │   │   ├── {68EA46E0-24D3-4B85-8A00-D44E1824ECB0} Mètre.PUE
+│   │   │   │   │   │   ├── {69405710-DA29-48F9-BF51-15267642CEF1} Seconde.PUE
+│   │   │   │   │   │   ├── {696C1371-FC65-4F17-9DA3-A221BEF7EF85} Degré Celsius.PUE
+│   │   │   │   │   │   ├── {6B574F31-7D6D-4214-AC90-C9B9E8E8DCC8} Coulomb.PUE
+│   │   │   │   │   │   ├── {6CA34541-F91F-4403-A266-475C0328F860} Débit.PUE
+│   │   │   │   │   │   ├── {71D42EC3-9BFD-48EB-A06A-0945C2F0118D} Volt ampère.PUE
+│   │   │   │   │   │   ├── {75731461-BC79-4B0C-A462-FAB04162457E} Tesla.PUE
+│   │   │   │   │   │   ├── {763A49BB-D0B6-4076-89F5-64E4C3C35EFD} Fréquence cardiaque.PUE
+│   │   │   │   │   │   ├── {780C681C-08DF-44F3-A201-C3937B5E9854} Cycle ventilatoire.PUE
+│   │   │   │   │   │   ├── {7E59E629-5C51-4BD8-9CDA-B185FF7E902F} Pourcentage.PUE
+│   │   │   │   │   │   ├── {7EB917B7-C4B1-47D6-A9FE-5A90BCAEF919} Pascal.PUE
+│   │   │   │   │   │   ├── {83068DF8-F08F-4F76-AEF9-72FC8AE1DBE1} Joule.PUE
+│   │   │   │   │   │   ├── {901934CE-3A00-40B8-8046-E558478AD36B} Gramme.PUE
+│   │   │   │   │   │   ├── {9F589406-33BC-43C9-945A-F85BF5C16E9D} Accélération.PUE
+│   │   │   │   │   │   ├── {a2ae7860-7e41-11dd-ad8b-0800200c9a66} Unité Arbitraire.PUE
+│   │   │   │   │   │   ├── {B1420610-1021-4B0A-8A9D-8D758075D1BC} Millimètre de Mercure.PUE
+│   │   │   │   │   │   ├── {B29CB442-96A0-492E-9800-0384DED6D39A} Vitesse.PUE
+│   │   │   │   │   │   ├── {B7FAD182-61A9-4BA3-9A96-E1E635214A0E} Concentration.PUE
+│   │   │   │   │   │   ├── {BC67FED1-F071-4C22-8996-D0D81BBCF47E} Watt.PUE
+│   │   │   │   │   │   ├── {BE3E6230-5F9E-43AA-8D1A-62DEE7F94AAD} HectoPascal.PUE
+│   │   │   │   │   │   ├── {BE8C061A-92EB-4234-8DAD-CA2018A2143C} Volt.PUE
+│   │   │   │   │   │   ├── {C509ABE9-9D5D-406B-956D-A994167E17D7} Conductivité.PUE
+│   │   │   │   │   │   ├── {C8E84C66-2FF5-426A-A6EF-ECDEB92C0FFB} Mètre cube.PUE
+│   │   │   │   │   │   ├── {CD467925-0F2C-4E8E-8DA1-41236D6D1DCA} Volume.PUE
+│   │   │   │   │   │   ├── {D13B7C8F-1D1F-44D0-948D-18618791D8A1} Gramme par m³.PUE
+│   │   │   │   │   │   ├── {D4F017E1-9730-43FD-A86C-669FD22CEAF3} Unité de couple.PUE
+│   │   │   │   │   │   ├── {E2B52183-44E8-44C1-98C1-A0E1CACAAE15} Watt par m².PUE
+│   │   │   │   │   │   ├── {E315B20B-286F-4C89-8A06-444FA952FD2D} Ampere.PUE
+│   │   │   │   │   │   ├── {EBC5E215-731A-4B1F-BD6F-132F3E2D6D34} Concentration.PUE
+│   │   │   │   │   │   ├── {F136F099-41EF-4EA0-AD6E-92D33AB4832F} Vitesse angulaire.PUE
+│   │   │   │   │   │   ├── {FA4FBB2F-87AA-4925-9ED3-2874D62A86EA} Lux.PUE
+│   │   │   │   │   │   ├── {FAC418D3-03BE-493C-B7B8-6CF34057A538} Henry.PUE
+│   │   │   │   │   │   ├── {FBACDCF6-C2D8-4815-A336-9A4D7E0EE35A} Mole.PUE
+│   │   │   │   │   │   └── {FFCA17EF-F82E-4C4B-814A-73B8AE6033F1} Accélération angulaire.PUE
+│   │   │   │   │   └── PUU/
+│   │   │   │   └── AideFeuilleDeCalcul.alt
+│   │   │   ├── exemples/
+│   │   │   │   ├── carre FFT.ltp
+│   │   │   │   ├── Circuit RC.ltp
+│   │   │   │   ├── Resonance Electrique.ltp
+│   │   │   │   ├── Signaux Divers.ltp
+│   │   │   │   ├── Syllabes.ltp
+│   │   │   │   ├── TP - Caractéristiques de résistors.ltp
+│   │   │   │   ├── TP - Chute d'une bille dans un fluide - Méthode d'Euler.ltp
+│   │   │   │   ├── TP - Loi de Mariotte.ltp
+│   │   │   │   ├── TP - Modulation d'amplitude.ltp
+│   │   │   │   ├── TP - Pendule.ltp
+│   │   │   │   ├── TP - RC Charge.ltp
+│   │   │   │   ├── TP - Synthèse calculée.ltp
+│   │   │   │   └── TP - Titrage pH-métrique.ltp
+│   │   │   ├── locale/
+│   │   │   │   ├── ar/
+│   │   │   │   │   └── LC_Messages/
+│   │   │   │   │       └── default.mo
+│   │   │   │   ├── en/
+│   │   │   │   │   └── LC_Messages/
+│   │   │   │   │       └── default.mo
+│   │   │   │   └── fr/
+│   │   │   │       └── LC_Messages/
+│   │   │   │           └── default.mo
+│   │   │   ├── ObjetCom/
+│   │   │   │   ├── locale/
+│   │   │   │   │   ├── ar/
+│   │   │   │   │   │   └── LC_Messages/
+│   │   │   │   │   │       └── default.mo
+│   │   │   │   │   ├── en/
+│   │   │   │   │   │   └── LC_Messages/
+│   │   │   │   │   │       └── default.mo
+│   │   │   │   │   └── fr/
+│   │   │   │   │       └── LC_Messages/
+│   │   │   │   │           └── default.mo
+│   │   │   │   ├── SrvAcquisition.dll
+│   │   │   │   ├── SrvEdition.dll
+│   │   │   │   ├── SrvTraitement.dll
+│   │   │   │   ├── SysamJUSB.dll
+│   │   │   │   ├── SysamPCI.dll
+│   │   │   │   ├── SysamSP5.dll
+│   │   │   │   └── SysamV6.dll
+│   │   │   ├── SKIN/
+│   │   │   │   ├── Aboutissement 2.bsf
+│   │   │   │   ├── Aboutissement 2.dia
+│   │   │   │   ├── Aboutissement 2.too
+│   │   │   │   ├── Aboutissement.bsf
+│   │   │   │   ├── Aboutissement.dia
+│   │   │   │   ├── Aboutissement.too
+│   │   │   │   ├── Animé 2.bsf
+│   │   │   │   ├── Animé 2.dia
+│   │   │   │   ├── Animé 2.too
+│   │   │   │   ├── Animé 3.bsf
+│   │   │   │   ├── Animé 3.dia
+│   │   │   │   ├── Animé 3.too
+│   │   │   │   ├── Animé.bsf
+│   │   │   │   ├── Animé.dia
+│   │   │   │   ├── Animé.too
+│   │   │   │   ├── Automne.bsf
+│   │   │   │   ├── Automne.dia
+│   │   │   │   ├── Automne.too
+│   │   │   │   ├── Avenir.bsf
+│   │   │   │   ├── Avenir.dia
+│   │   │   │   ├── Avenir.too
+│   │   │   │   ├── Aventure.bsf
+│   │   │   │   ├── Aventure.dia
+│   │   │   │   ├── Aventure.too
+│   │   │   │   ├── Bleuet.bsf
+│   │   │   │   ├── Bleuet.dia
+│   │   │   │   ├── Bleuet.too
+│   │   │   │   ├── Carbone.bsf
+│   │   │   │   ├── Carbone.dia
+│   │   │   │   ├── Carbone.too
+│   │   │   │   ├── Carré Gris.bsf
+│   │   │   │   ├── Carré Gris.dia
+│   │   │   │   ├── Carré Gris.too
+│   │   │   │   ├── Carré Jaune.bsf
+│   │   │   │   ├── Carré Jaune.dia
+│   │   │   │   ├── Carré Jaune.too
+│   │   │   │   ├── Carré Vert.bsf
+│   │   │   │   ├── Carré Vert.dia
+│   │   │   │   ├── Carré Vert.too
+│   │   │   │   ├── Circuit 2.bsf
+│   │   │   │   ├── Circuit 2.dia
+│   │   │   │   ├── Circuit 2.too
+│   │   │   │   ├── Circuit.bsf
+│   │   │   │   ├── Circuit.dia
+│   │   │   │   ├── Circuit.too
+│   │   │   │   ├── Circuit2.bsf
+│   │   │   │   ├── Circuit2.too
+│   │   │   │   ├── Classique.bsf
+│   │   │   │   ├── Classique.dia
+│   │   │   │   ├── Classique.too
+│   │   │   │   ├── Contemporain.bsf
+│   │   │   │   ├── Contemporain.dia
+│   │   │   │   ├── Contemporain.too
+│   │   │   │   ├── Corner.bsf
+│   │   │   │   ├── Corner.too
+│   │   │   │   ├── Design.bsf
+│   │   │   │   ├── Design.dia
+│   │   │   │   ├── Design.too
+│   │   │   │   ├── Découverte.bsf
+│   │   │   │   ├── Découverte.dia
+│   │   │   │   ├── Découverte.too
+│   │   │   │   ├── Ecolab2.bsf
+│   │   │   │   ├── Ecolab2.dia
+│   │   │   │   ├── Ecolab2.too
+│   │   │   │   ├── Energie bleue.bsf
+│   │   │   │   ├── Energie bleue.dia
+│   │   │   │   ├── Energie bleue.too
+│   │   │   │   ├── Energie jaune.bsf
+│   │   │   │   ├── Energie jaune.dia
+│   │   │   │   ├── Energie jaune.too
+│   │   │   │   ├── Energie verte.bsf
+│   │   │   │   ├── Energie verte.dia
+│   │   │   │   ├── Energie verte.too
+│   │   │   │   ├── eurosmart.bsf
+│   │   │   │   ├── Eurosmart.dia
+│   │   │   │   ├── eurosmart.too
+│   │   │   │   ├── Excalibur.bsf
+│   │   │   │   ├── Excalibur.dia
+│   │   │   │   ├── Excalibur.too
+│   │   │   │   ├── Exclusif 2.bsf
+│   │   │   │   ├── Exclusif 2.dia
+│   │   │   │   ├── Exclusif 2.too
+│   │   │   │   ├── Exclusif XP 2.bsf
+│   │   │   │   ├── Exclusif XP 2.dia
+│   │   │   │   ├── Exclusif XP 2.too
+│   │   │   │   ├── Exclusif XP 3.bsf
+│   │   │   │   ├── Exclusif XP 3.dia
+│   │   │   │   ├── Exclusif XP 3.too
+│   │   │   │   ├── Exclusif XP.bsf
+│   │   │   │   ├── Exclusif XP.dia
+│   │   │   │   ├── Exclusif XP.too
+│   │   │   │   ├── Exclusif.bsf
+│   │   │   │   ├── Exclusif.dia
+│   │   │   │   ├── Exclusif.too
+│   │   │   │   ├── ExOS.bsf
+│   │   │   │   ├── ExOS.too
+│   │   │   │   ├── ExOS2.bsf
+│   │   │   │   ├── ExOS2.too
+│   │   │   │   ├── Exploration.bsf
+│   │   │   │   ├── Exploration.dia
+│   │   │   │   ├── Exploration.too
+│   │   │   │   ├── Express.bsf
+│   │   │   │   ├── Express.dia
+│   │   │   │   ├── Express.too
+│   │   │   │   ├── Expérience.bsf
+│   │   │   │   ├── Expérience.dia
+│   │   │   │   ├── Expérience.too
+│   │   │   │   ├── Fraicheur bleute.bsf
+│   │   │   │   ├── Fraicheur bleute.dia
+│   │   │   │   ├── Fraicheur bleute.too
+│   │   │   │   ├── Fraicheur orange.bsf
+│   │   │   │   ├── Fraicheur orange.dia
+│   │   │   │   ├── Fraicheur orange.too
+│   │   │   │   ├── Fusion.bsf
+│   │   │   │   ├── Fusion.dia
+│   │   │   │   ├── Fusion.too
+│   │   │   │   ├── Futur bleu.bsf
+│   │   │   │   ├── Futur bleu.dia
+│   │   │   │   ├── Futur bleu.too
+│   │   │   │   ├── Futur vert.bsf
+│   │   │   │   ├── Futur vert.dia
+│   │   │   │   ├── Futur vert.too
+│   │   │   │   ├── Futur.bsf
+│   │   │   │   ├── Futur.dia
+│   │   │   │   ├── Futur.too
+│   │   │   │   ├── galaxie bleue.bsf
+│   │   │   │   ├── galaxie bleue.dia
+│   │   │   │   ├── galaxie bleue.too
+│   │   │   │   ├── galaxie verte.bsf
+│   │   │   │   ├── galaxie verte.dia
+│   │   │   │   ├── galaxie verte.too
+│   │   │   │   ├── GMOPASAP.bsf
+│   │   │   │   ├── GMOPASAP.dia
+│   │   │   │   ├── GMOPASAP.too
+│   │   │   │   ├── Gradiant.bsf
+│   │   │   │   ├── Gradiant.dia
+│   │   │   │   ├── Gradiant.too
+│   │   │   │   ├── GrayZone.bsf
+│   │   │   │   ├── GrayZone.too
+│   │   │   │   ├── Illumination.bsf
+│   │   │   │   ├── Illumination.too
+│   │   │   │   ├── Illusion.bsf
+│   │   │   │   ├── Illusion.dia
+│   │   │   │   ├── Illusion.too
+│   │   │   │   ├── Lagon.bsf
+│   │   │   │   ├── Lagon.dia
+│   │   │   │   ├── Lagon.too
+│   │   │   │   ├── Lagoon.bsf
+│   │   │   │   ├── Lagoon.too
+│   │   │   │   ├── latisbio.bsf
+│   │   │   │   ├── latisbio.dia
+│   │   │   │   ├── latisbio.too
+│   │   │   │   ├── LatisChim.bsf
+│   │   │   │   ├── LatisChim.dia
+│   │   │   │   ├── LatisChim.too
+│   │   │   │   ├── LatiScope.bsf
+│   │   │   │   ├── LatiScope.dia
+│   │   │   │   ├── LatiScope.too
+│   │   │   │   ├── LatisMoteur.bsf
+│   │   │   │   ├── LatisMoteur.dia
+│   │   │   │   ├── LatisMoteur.too
+│   │   │   │   ├── LatiSpec.bsf
+│   │   │   │   ├── LatiSpec.dia
+│   │   │   │   ├── LatiSpec.too
+│   │   │   │   ├── LatisPlana.bsf
+│   │   │   │   ├── LatisPlana.dia
+│   │   │   │   ├── LatisPlana.too
+│   │   │   │   ├── LatisPLP.bsf
+│   │   │   │   ├── LatisPLP.dia
+│   │   │   │   ├── LatisPLP.too
+│   │   │   │   ├── latispro.bsf
+│   │   │   │   ├── latispro.dia
+│   │   │   │   ├── latispro.too
+│   │   │   │   ├── LatisPro2.bsf
+│   │   │   │   ├── LatisPro2.dia
+│   │   │   │   ├── LatisPro2.too
+│   │   │   │   ├── Ligne atténuée.bsf
+│   │   │   │   ├── Ligne atténuée.dia
+│   │   │   │   ├── Ligne atténuée.too
+│   │   │   │   ├── Ligne.bsf
+│   │   │   │   ├── Ligne.dia
+│   │   │   │   ├── Ligne.too
+│   │   │   │   ├── Lumière bleue.bsf
+│   │   │   │   ├── Lumière bleue.dia
+│   │   │   │   ├── Lumière bleue.too
+│   │   │   │   ├── Lumière jaune.bsf
+│   │   │   │   ├── Lumière jaune.dia
+│   │   │   │   ├── Lumière jaune.too
+│   │   │   │   ├── MacOS.bsf
+│   │   │   │   ├── MacOS.dia
+│   │   │   │   ├── MacOS.too
+│   │   │   │   ├── Matrix.bsf
+│   │   │   │   ├── Matrix.dia
+│   │   │   │   ├── Matrix.too
+│   │   │   │   ├── Metal.bsf
+│   │   │   │   ├── Metal.dia
+│   │   │   │   ├── Metal.too
+│   │   │   │   ├── Mimosa.bsf
+│   │   │   │   ├── Mimosa.dia
+│   │   │   │   ├── Mimosa.too
+│   │   │   │   ├── Moderne.bsf
+│   │   │   │   ├── Moderne.dia
+│   │   │   │   ├── Moderne.too
+│   │   │   │   ├── Morphee vert.bsf
+│   │   │   │   ├── Morphee vert.dia
+│   │   │   │   ├── Morphee vert.too
+│   │   │   │   ├── Morphee.bsf
+│   │   │   │   ├── Morphee.dia
+│   │   │   │   ├── Morphee.too
+│   │   │   │   ├── Multimédia 2.bsf
+│   │   │   │   ├── Multimédia 2.dia
+│   │   │   │   ├── Multimédia 2.too
+│   │   │   │   ├── Multimédia.bsf
+│   │   │   │   ├── Multimédia.dia
+│   │   │   │   ├── Multimédia.too
+│   │   │   │   ├── Métallique .bsf
+│   │   │   │   ├── Métallique .dia
+│   │   │   │   ├── Métallique .too
+│   │   │   │   ├── Métallique vert.bsf
+│   │   │   │   ├── Métallique vert.dia
+│   │   │   │   ├── Métallique vert.too
+│   │   │   │   ├── Métallique.bsf
+│   │   │   │   ├── Métallique.dia
+│   │   │   │   ├── Métallique.too
+│   │   │   │   ├── Nuit.bsf
+│   │   │   │   ├── Nuit.dia
+│   │   │   │   ├── Nuit.too
+│   │   │   │   ├── Odyssée.bsf
+│   │   │   │   ├── Odyssée.dia
+│   │   │   │   ├── Odyssée.too
+│   │   │   │   ├── Option 2.bsf
+│   │   │   │   ├── Option 2.dia
+│   │   │   │   ├── Option 2.too
+│   │   │   │   ├── Option 3.bsf
+│   │   │   │   ├── Option 3.dia
+│   │   │   │   ├── Option 3.too
+│   │   │   │   ├── Option.bsf
+│   │   │   │   ├── Option.dia
+│   │   │   │   ├── Option.too
+│   │   │   │   ├── Orange.bsf
+│   │   │   │   ├── Orange.dia
+│   │   │   │   ├── Orange.too
+│   │   │   │   ├── Pastel.bsf
+│   │   │   │   ├── Pastel.dia
+│   │   │   │   ├── Pastel.too
+│   │   │   │   ├── Perfection.bsf
+│   │   │   │   ├── Perfection.dia
+│   │   │   │   ├── Perfection.too
+│   │   │   │   ├── Proton 2.bsf
+│   │   │   │   ├── Proton 2.dia
+│   │   │   │   ├── Proton 2.too
+│   │   │   │   ├── Proton.bsf
+│   │   │   │   ├── Proton.dia
+│   │   │   │   ├── Proton.too
+│   │   │   │   ├── Pétrole.bsf
+│   │   │   │   ├── Pétrole.dia
+│   │   │   │   ├── Pétrole.too
+│   │   │   │   ├── Relief bleu.bsf
+│   │   │   │   ├── Relief bleu.dia
+│   │   │   │   ├── Relief bleu.too
+│   │   │   │   ├── Relief rouge.bsf
+│   │   │   │   ├── Relief rouge.dia
+│   │   │   │   ├── Relief rouge.too
+│   │   │   │   ├── Relief vert.bsf
+│   │   │   │   ├── Relief vert.dia
+│   │   │   │   ├── Relief vert.too
+│   │   │   │   ├── Rétro.bsf
+│   │   │   │   ├── Rétro.dia
+│   │   │   │   ├── Rétro.too
+│   │   │   │   ├── Rêve 2.bsf
+│   │   │   │   ├── Rêve 2.dia
+│   │   │   │   ├── Rêve 2.too
+│   │   │   │   ├── Rêve.bsf
+│   │   │   │   ├── Rêve.dia
+│   │   │   │   ├── Rêve.too
+│   │   │   │   ├── Secret.bsf
+│   │   │   │   ├── Secret.dia
+│   │   │   │   ├── Secret.too
+│   │   │   │   ├── Sobriété teintée.bsf
+│   │   │   │   ├── Sobriété teintée.dia
+│   │   │   │   ├── Sobriété teintée.too
+│   │   │   │   ├── Sobriété.bsf
+│   │   │   │   ├── Sobriété.dia
+│   │   │   │   ├── Sobriété.too
+│   │   │   │   ├── Source 2.bsf
+│   │   │   │   ├── Source 2.dia
+│   │   │   │   ├── Source 2.too
+│   │   │   │   ├── Source.bsf
+│   │   │   │   ├── Source.dia
+│   │   │   │   ├── Source.too
+│   │   │   │   ├── Sport 2.bsf
+│   │   │   │   ├── Sport 2.dia
+│   │   │   │   ├── Sport 2.too
+│   │   │   │   ├── Sport.bsf
+│   │   │   │   ├── Sport.dia
+│   │   │   │   ├── Sport.too
+│   │   │   │   ├── Sport2.bsf
+│   │   │   │   ├── Sport2.too
+│   │   │   │   ├── Sprint 2.bsf
+│   │   │   │   ├── Sprint 2.dia
+│   │   │   │   ├── Sprint 2.too
+│   │   │   │   ├── Sprint 3.bsf
+│   │   │   │   ├── Sprint 3.dia
+│   │   │   │   ├── Sprint 3.too
+│   │   │   │   ├── Sprint.bsf
+│   │   │   │   ├── Sprint.dia
+│   │   │   │   ├── Sprint.too
+│   │   │   │   ├── Sputnik.bsf
+│   │   │   │   ├── Sputnik.dia
+│   │   │   │   ├── Sputnik.too
+│   │   │   │   ├── Style.bsf
+│   │   │   │   ├── Style.dia
+│   │   │   │   ├── Style.too
+│   │   │   │   ├── Techno 2.bsf
+│   │   │   │   ├── Techno 2.dia
+│   │   │   │   ├── Techno 2.too
+│   │   │   │   ├── Techno.bsf
+│   │   │   │   ├── Techno.dia
+│   │   │   │   ├── Techno.too
+│   │   │   │   ├── Tendance.bsf
+│   │   │   │   ├── Tendance.dia
+│   │   │   │   ├── Tendance.too
+│   │   │   │   ├── Test.bsf
+│   │   │   │   ├── Test.too
+│   │   │   │   ├── Transparence.bsf
+│   │   │   │   ├── Transparence.dia
+│   │   │   │   ├── Transparence.too
+│   │   │   │   ├── Trombone bleu.bsf
+│   │   │   │   ├── Trombone bleu.dia
+│   │   │   │   ├── Trombone bleu.too
+│   │   │   │   ├── Trombone marron.bsf
+│   │   │   │   ├── Trombone marron.dia
+│   │   │   │   ├── Trombone marron.too
+│   │   │   │   ├── Violine.bsf
+│   │   │   │   ├── Violine.dia
+│   │   │   │   ├── Violine.too
+│   │   │   │   ├── Windows 98-16.bsf
+│   │   │   │   ├── Windows 98-16.dia
+│   │   │   │   ├── Windows 98-16.too
+│   │   │   │   ├── Windows 98.bsf
+│   │   │   │   ├── Windows 98.dia
+│   │   │   │   ├── Windows 98.too
+│   │   │   │   ├── XP Bleu.bsf
+│   │   │   │   ├── XP Bleu.dia
+│   │   │   │   ├── XP Bleu.too
+│   │   │   │   ├── XP Moderne.bsf
+│   │   │   │   ├── XP Moderne.dia
+│   │   │   │   ├── XP Moderne.too
+│   │   │   │   ├── XP Vert.bsf
+│   │   │   │   ├── XP Vert.dia
+│   │   │   │   └── XP Vert.too
+│   │   │   ├── Travail/
+│   │   │   ├── UpdateV6/
+│   │   │   │   └── Update_Sysam-V6_1.10.exe
+│   │   │   ├── Videos/
+│   │   │   │   ├── CLOCHE.AVI
+│   │   │   │   ├── CoursInertie.avi
+│   │   │   │   ├── onde3.avi
+│   │   │   │   ├── REB-HORI.AVI
+│   │   │   │   ├── REB-VERT.AVI
+│   │   │   │   ├── TP1S1èreloiNewton.avi
+│   │   │   │   ├── TP1S2èmeloiNewton.avi
+│   │   │   │   ├── TP1SBéret.avi
+│   │   │   │   ├── TP1Schuteparabolique.avi
+│   │   │   │   ├── TP1Schutvert.avi
+│   │   │   │   ├── TP1Stranslation1.avi
+│   │   │   │   ├── TP1Stranslation2.avi
+│   │   │   │   ├── TP1Stranslation3.avi
+│   │   │   │   ├── TPSecondeGravitation1.avi
+│   │   │   │   ├── TPsecondeGravitation3.avi
+│   │   │   │   ├── TPSecondeProjectile.avi
+│   │   │   │   ├── TPSecondeRelativitémouvement.avi
+│   │   │   │   └── TPTSEul1.avi
+│   │   │   └── LatisPro.exe
+│   │   ├── unins000.dat
+│   │   └── unins000.exe
+│   └── Regressi/
+│       ├── Arduino/
+│       │   ├── etalon/
+│       │   │   └── etalon.ino
+│       │   ├── oscillo/
+│       │   │   └── oscillo.ino
+│       │   ├── oscilloCurie101/
+│       │   │   └── oscilloCurie101.ino
+│       │   ├── oscilloDue/
+│       │   │   └── oscilloDue.ino
+│       │   ├── oscilloWifi/
+│       │   │   └── oscilloWifi.ino
+│       │   ├── pointWifiDirect/
+│       │   │   └── pointWifiDirect.ino
+│       │   ├── simplePoint/
+│       │   │   └── simplePoint.ino
+│       │   ├── simplePointWifi/
+│       │   │   └── simplePointWifi.ino
+│       │   ├── simpleTemps/
+│       │   │   └── simpleTemps.ino
+│       │   ├── startStop/
+│       │   │   └── startstop.ino
+│       │   ├── tempsArduino/
+│       │   │   └── tempsArduino.ino
+│       │   ├── etalon.py
+│       │   ├── oscillo-csv.py
+│       │   ├── oscillo.py
+│       │   ├── oscilloLent.py
+│       │   ├── simplePoint.py
+│       │   ├── simpleTemps.py
+│       │   ├── startstop.py
+│       │   ├── temperature.py
+│       │   └── tempsMicrobit.py
+│       ├── Exemples/
+│       │   ├── Bille.rw3
+│       │   ├── Brest-marees.rw3
+│       │   ├── comete-Halley.rw3
+│       │   ├── Dosage-glycine.rw3
+│       │   ├── Exemples.ini
+│       │   ├── Magnum.rw3
+│       │   ├── Methode-Gran-AgI.rw3
+│       │   ├── Modele-charge-RC.rw3
+│       │   ├── Modele-equa-diff.rw3
+│       │   └── oscillateurs-couples.rw3
+│       ├── Portable/
+│       │   └── Regressi.exe
+│       ├── avcodec-58.dll
+│       ├── avdevice-58.dll
+│       ├── avfilter-7.dll
+│       ├── avformat-58.dll
+│       ├── avutil-56.dll
+│       ├── bass.dll
+│       ├── bass_aac.dll
+│       ├── bassmidi.dll
+│       ├── ConfigRegressi.exe
+│       ├── ConfigRegressi.txt
+│       ├── ffprobe.exe
+│       ├── indicateur.ini
+│       ├── Live555Dll.dll
+│       ├── Regressi-incertitudes.pdf
+│       ├── Regressi-modelisation.pdf
+│       ├── Regressi.chm
+│       ├── Regressi.docx
+│       ├── Regressi.exe
+│       ├── Regressi.odt
+│       ├── Regressi.pdf
+│       ├── Regressi.txt
+│       ├── RegressiLatex.tex
+│       ├── swresample-3.dll
+│       ├── swscale-5.dll
+│       └── ~avireg~.rw3
+├── Mathématiques/
+│   ├── Corrigés TD/
+│   │   ├── Feuille 1 - Suites - Séries/
+│   │   ├── Feuille 2 - Espaces vectoriels/
+│   │   ├── Feuille 3 - Applications linéaires - Hyperplans/
+│   │   ├── Feuille 4 - Matrices - Déterminants/
+│   │   └── Feuille 5 - Intégration/
+│   ├── Cours/
+│   │   ├── PSI - Chapitre A - Suites numériques.pdf
+│   │   ├── PSI - Chapitre B - Séries numériques.pdf
+│   │   ├── PSI - Chapitre C - Espaces vectoriels.pdf
+│   │   ├── PSI - Chapitre D - Applications linéaires.pdf
+│   │   ├── PSI - Chapitre E - Matrices et déterminants.pdf
+│   │   ├── PSI - Chapitre F - Intégrales généralisées.pdf
+│   │   ├── PSI - Chapitre G - Réduction.pdf
+│   │   ├── PSI - Chapitre H - Suites et séries de fonctions.pdf
+│   │   ├── PSI - Chapitre I - Probabilités - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre J - Séries entières - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre K - Intégrales dépendant d'un paramètre - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre L - Variables aléatoires - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre M - Espaces préhilbertiens - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre N - Espaces vectoriels normés - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre O - Topologie - Limites et continuité - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre P - Endomorphismes remarquables des espaces euclidiens - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre Q - Equations différentielles linéaires - 25-26 - Version étudiants.pdf
+│   │   ├── PSI - Chapitre R - Dérivation des fonctions vectorielles - 25-26 - Version étudiants.pdf
+│   │   └── PSI - Chapitre S - Fonctions de plusieurs variables - 25-26 - Version étudiants.pdf
+│   ├── Devoirs/
+│   │   ├── Sujets de révision semaine du 16 mars/
+│   │   │   ├── Banque_E3A_E4A_2024_PSI_Mathématiques_ea.pdf
+│   │   │   ├── CentraleSupélec_2025_PSI_Mathématiques_1_e.pdf
+│   │   │   ├── Concours_Commun_Polytechniques_(CCINP)_2023_PSI_Mathématiques_e.pdf
+│   │   │   └── Mathématiques II-Mines-Ponts-PSI-2025.pdf
+│   │   ├── Sujets de révision semaine du 23 mars/
+│   │   │   ├── Banque_E3A_E4A_2022_PSI_Mathématiques_e.pdf
+│   │   │   ├── CentraleSupélec_2023_PSI_Mathématiques_2_e.pdf
+│   │   │   ├── Concours_Commun_Mines-Ponts_(CCMP)_2024_PSI_Mathématiques_2_e.pdf
+│   │   │   └── Concours_Commun_Polytechniques_(CCINP)_2022_PSI_Mathématiques_e.pdf
+│   │   ├── Sujets de révision semaine du 30 mars 2026/
+│   │   │   ├── Banque_E3A_E4A_2021_PSI_Mathématiques_ea.pdf
+│   │   │   ├── CCINP PSI 2021.pdf
+│   │   │   ├── Centrale PSI 1 2023.pdf
+│   │   │   ├── e3a PC 2022.pdf
+│   │   │   └── Mines-Ponts PC-PSI 1 2024.pdf
+│   │   ├── CB PSI RG 2025-2026 (CCINP PSI 2025 - CS PSI 1 2025).pdf
+│   │   ├── Concours_Commun_Polytechniques_(CCINP)_2023_PSI_Mathématiques_e.pdf
+│   │   ├── Corrigé du DS 1 PSI RG 2026-2026.pdf
+│   │   ├── Devoir de vacances.pdf
+│   │   ├── DM 1 PSI RG 2025-2026 (séries).pdf
+│   │   ├── DM 3 PSI RG 2025-2026 - e3a PC 2024.pdf
+│   │   ├── DM 3b PSI RG 2025-2026 - Mines-Ponts PC-PSI 2025.pdf
+│   │   ├── DM 4 PSI RG 2025-2026 - CCINP PC 2023.pdf
+│   │   ├── DM 4b PSI RG 2025_2026 - Mines-Ponts PC 2 2025.pdf
+│   │   ├── DM 5 PSI RG 2025-2026 - CCINP PC 2018.pdf
+│   │   ├── DM 5b PSI RG 2025-2026 - CentraleSupélec PSI 1 2024.pdf
+│   │   ├── DS 1 PSI RG 2026-2026 (suites-séries-algèbre linéaire de Sup).pdf
+│   │   ├── DS 2 PSI RG 2025-2026 (suites-séries-algèbre linéaire - intégration de Sup).pdf
+│   │   ├── DS 3 PSI RG 2025-2026 (suites et séries de fonctions - réduction).pdf
+│   │   ├── DS 4 PSI RG 2025-2026 (CCINP PSI 2020 (réduction - intégrales à paramètre - probas) - CS PSI.pdf
+│   │   ├── DS 5 PSI RG 2025-2026 (CCINP PSI 2024 - CS PSI 2 2025 - Mines-Ponts PSI 2 2020 ).pdf
+│   │   └── Interro 1 PSI RG 2025-2026.pdf
+│   ├── Programmes de colles/
+│   │   ├── Programme de colles semaine 1 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 10 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 11 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 12 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 13 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 14 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 15 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 16 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 17 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 18 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 19 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 2 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 20 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 3 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 4 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 5 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 6 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 7 PSI RG 2025-2026.pdf
+│   │   ├── Programme de colles semaine 8 PSI RG 2025-2026.pdf
+│   │   └── Programme de colles semaine 9 PSI RG 2025-2026.pdf
+│   ├── Préparation oraux/
+│   │   ├── Préparation oraux 1 PSI RG 2025-2026 (algèbre linéaire - réduction).pdf
+│   │   ├── Préparation oraux 2 PSI RG 2025-2026 (suites et séries - suites et séries de fonctions - sér.pdf
+│   │   └── Préparation oraux 3 PSI RG 2025-2026 (probabilités).pdf
+│   └── TD/
+│       ├── Feuille d'exercices 1 (suites-séries).pdf
+│       ├── Feuille d'exercices 10 PSI RG 2025-2026 (séries entières).pdf
+│       ├── Feuille d'exercices 11 PSI RG 2025-2026 (intégrales dépendant d'un paramètre).pdf
+│       ├── Feuille d'exercices 12 PSI RG 2025-2026 (variables aléatoires).pdf
+│       ├── Feuille d'exercices 13 PSI RG 2025-2026 (espaces préhilbertiens).pdf
+│       ├── Feuille d'exercices 14 PSI RG 2025-2026 (espaces vectoriels normés).pdf
+│       ├── Feuille d'exercices 15 PSI RG 2025-2026 (topologie - limites et continuité - endomorphismes des es.pdf
+│       ├── Feuille d'exercices 16 PSI RG 2025-2026 (endomorphismes des espaces euclidiens - théorème spectr.pdf
+│       ├── Feuille d'exercices 17 PSI RG 2025-2026 (EDL - SDL).pdf
+│       ├── Feuille d'exercices 18 PSI RG 2025-2026 (Fonctions de plusieurs variables).pdf
+│       ├── Feuille d'exercices 2 (espaces vectoriels).pdf
+│       ├── Feuille d'exercices 3 PSI RG 2025-2026 (applications linéaires - matrices - hyperplans).pdf
+│       ├── Feuille d'exercices 4 PSI RG 2025-2026 (matrices et applications linéaires - déterminants).pdf
+│       ├── Feuille d'exercices 5 PSI RG 2025-2026 (intégration de Sup - intégrales généralisées).pdf
+│       ├── Feuille d'exercices 6 PSI RG 2025-2026 (réduction).pdf
+│       ├── Feuille d'exercices 7 PSI RG 2025-2026 (suites de fonctions).pdf
+│       ├── Feuille d'exercices 8 PSI RG 2025-2026 (convergence dominée - séries de fonctions).pdf
+│       └── Feuille d'exercices 9 PSI RG 2025-2026 (probabilités).pdf
+├── Sciences Physiques/
+│   ├── Cours et TD/
+│   │   ├── Chimie Sup 2025 2026.pdf
+│   │   ├── Conversion de puissance 2025 2026.pdf
+│   │   ├── Electrochimie 2025 2026.pdf
+│   │   ├── Electromagnétisme 2025 2026.pdf
+│   │   ├── Electronique 2025 2026.pdf
+│   │   ├── L'énergie c'est quoi 2025.pdf
+│   │   ├── Mécanique des fluides 2025-2026.pdf
+│   │   ├── Mécanique Sup 2025 2026.pdf
+│   │   ├── Ondes 2025 2026.pdf
+│   │   ├── Présentation E6.ppsx
+│   │   ├── Thermochimie 2025 2026.pdf
+│   │   └── Thermodynamique 2025 2026.pdf
+│   ├── Devoir Maison/
+│   │   ├── DM Modélisation n°1 CCINP-PSI-Mod-2022-Sismometres.pdf
+│   │   ├── DM n°0 2026.pdf
+│   │   ├── DM n°0 correction 2026.pdf
+│   │   ├── DM n°1 2025.pdf
+│   │   ├── DM n°1 correction 2025.pdf
+│   │   ├── DM n°2 2025.pdf
+│   │   ├── DM n°2 correction 2025.pdf
+│   │   ├── DM n°3 2026.pdf
+│   │   ├── DM n°3 correction 2026.pdf
+│   │   ├── DM n°4 2026.pdf
+│   │   ├── DM n°4 correction 2026.pdf
+│   │   ├── DM n°5 2026.pdf
+│   │   ├── DM n°5 correction 2026.pdf
+│   │   └── DMM1 Modélisation correction 2026.pdf
+│   ├── Devoirs Surveillés/
+│   │   ├── CCB correction 2026.pdf
+│   │   ├── CCB correction modélisation physique 2026.pdf
+│   │   ├── CCB Physique Chimie 2026 e3a-2025.pdf
+│   │   ├── CCB-Modélisation et ingénierie numérique-CCINP PSI-2019.pdf
+│   │   ├── DS n°1 2025.pdf
+│   │   ├── DS n°1 correction 2025.pdf
+│   │   ├── DS n°2 2026.pdf
+│   │   ├── DS n°2 correction 2026.pdf
+│   │   ├── DS n°3 2026.pdf
+│   │   ├── DS n°3 correction 2026.pdf
+│   │   ├── DS n°4 2026.pdf
+│   │   ├── DS n°4 correction 2026.pdf
+│   │   ├── DS n°5 2026.pdf
+│   │   └── DS n°5 correction 2026.pdf
+│   ├── Fiches outils et conseils/
+│   │   ├── Aide mémoire PSI Roland Garros.pdf
+│   │   ├── Fiche Outils 1 Calcul des différentielles.pdf
+│   │   ├── Fiche Outils 2 Opérateurs vectoriels.pdf
+│   │   ├── Fiche Outils 3 Introduction à la métrologie BILAN.pdf
+│   │   ├── Fiche Outils 3 Introduction à la métrologie.pdf
+│   │   ├── Formulaire épreuves de sciences physiques.pdf
+│   │   ├── Les grandes dates de la physique.pdf
+│   │   ├── Patron-cylindriques.pdf
+│   │   ├── Patron-spheriques.pdf
+│   │   ├── Planning vacances noel 2025 2026.pdf
+│   │   └── Pour bien préparer votre rentrée 2025.pdf
+│   ├── Interrogations/
+│   │   ├── INTERROGATION 1  correction 2025.pdf
+│   │   ├── INTERROGATION 1 2025.pdf
+│   │   ├── INTERROGATION 10 correction.pdf
+│   │   ├── INTERROGATION 10.pdf
+│   │   ├── INTERROGATION 11 correction.pdf
+│   │   ├── INTERROGATION 11.pdf
+│   │   ├── INTERROGATION 12 correction.pdf
+│   │   ├── INTERROGATION 12.pdf
+│   │   ├── INTERROGATION 13 correction.pdf
+│   │   ├── INTERROGATION 13.pdf
+│   │   ├── INTERROGATION 14 correction.pdf
+│   │   ├── INTERROGATION 14.pdf
+│   │   ├── INTERROGATION 15 correction.pdf
+│   │   ├── INTERROGATION 15.pdf
+│   │   ├── INTERROGATION 2 2025.pdf
+│   │   ├── INTERROGATION 2 correction 2025.pdf
+│   │   ├── INTERROGATION 3 2025.pdf
+│   │   ├── INTERROGATION 3 correction 2025.pdf
+│   │   ├── INTERROGATION 4 correction.pdf
+│   │   ├── INTERROGATION 4.pdf
+│   │   ├── INTERROGATION 5 - Correction.pdf
+│   │   ├── INTERROGATION 5.pdf
+│   │   ├── INTERROGATION 6 - Correction.pdf
+│   │   ├── INTERROGATION 6.pdf
+│   │   ├── INTERROGATION 7 - Correction.pdf
+│   │   ├── INTERROGATION 7.pdf
+│   │   ├── INTERROGATION 8 correction.pdf
+│   │   ├── INTERROGATION 8.pdf
+│   │   ├── INTERROGATION 9 correction.pdf
+│   │   └── INTERROGATION 9.pdf
+│   ├── Préparation Oraux/
+│   │   ├── Conseils avant les oraux_2026.pdf
+│   │   ├── Polycopié Révision Oral.pdf
+│   │   └── Résolution de Problème.pdf
+│   ├── Sujets Blancs/
+│   │   ├── 2020-Concours Centrale-Supélec-Physique-Chimie 2-PSI-enonce.pdf
+│   │   ├── 2021-Concours Centrale-Supélec-Physique-Chimie 2-PSI-enonce.pdf
+│   │   ├── 2023-Concours commun INP-Physique-Chimie-PSI-enonce.pdf
+│   │   ├── 2023-Concours e3a-Physique-Chimie-PSI-enonce.pdf
+│   │   ├── 2024-Concours commun INP-Physique-Chimie-PSI-enonce-2.pdf
+│   │   └── 2024-Concours e3a-Physique-Chimie-PSI-enonce-2.pdf
+│   ├── Sujets de Kholles PSI/
+│   │   ├── Planche d'exercices colle  n°1.pdf
+│   │   ├── Planche d'exercices colle  n°10.pdf
+│   │   ├── Planche d'exercices colle  n°11.pdf
+│   │   ├── Planche d'exercices colle  n°15.pdf
+│   │   ├── Planche d'exercices colle  n°16.pdf
+│   │   ├── Planche d'exercices colle  n°2.pdf
+│   │   ├── Planche d'exercices colle  n°5  correction.pdf
+│   │   ├── Planche d'exercices colle  n°5.pdf
+│   │   ├── Planche d'exercices colle  n°9.pdf
+│   │   ├── Planche d'exercices colle n°1 correction.pdf
+│   │   ├── Planche d'exercices colle n°10 correction.pdf
+│   │   ├── Planche d'exercices colle n°11 correction.pdf
+│   │   ├── Planche d'exercices colle n°12 Correction.pdf
+│   │   ├── Planche d'exercices colle n°12.pdf
+│   │   ├── Planche d'exercices colle n°13 Correction.pdf
+│   │   ├── Planche d'exercices colle n°13.pdf
+│   │   ├── Planche d'exercices colle n°14 correction.pdf
+│   │   ├── Planche d'exercices colle n°14.pdf
+│   │   ├── Planche d'exercices colle n°15 correction.pdf
+│   │   ├── Planche d'exercices colle n°16 correction.pdf
+│   │   ├── Planche d'exercices colle n°17 correction.pdf
+│   │   ├── Planche d'exercices colle n°17.pdf
+│   │   ├── Planche d'exercices colle n°18 correction.pdf
+│   │   ├── Planche d'exercices colle n°18.pdf
+│   │   ├── Planche d'exercices colle n°19 correction.pdf
+│   │   ├── Planche d'exercices colle n°19.pdf
+│   │   ├── Planche d'exercices colle n°2 correction.pdf
+│   │   ├── Planche d'exercices colle n°20 correction.pdf
+│   │   ├── Planche d'exercices colle n°20.pdf
+│   │   ├── Planche d'exercices colle n°3 correction.pdf
+│   │   ├── Planche d'exercices colle n°3.pdf
+│   │   ├── Planche d'exercices colle n°4 correction.pdf
+│   │   ├── Planche d'exercices colle n°4.pdf
+│   │   ├── Planche d'exercices colle n°6 Correction.pdf
+│   │   ├── Planche d'exercices colle n°6.pdf
+│   │   ├── Planche d'exercices colle n°7 Correction.pdf
+│   │   ├── Planche d'exercices colle n°7.pdf
+│   │   ├── Planche d'exercices colle n°8 Correction.pdf
+│   │   ├── Planche d'exercices colle n°8.pdf
+│   │   └── Planche d'exercices colle n°9 correction.pdf
+│   ├── TIPE/
+│   │   ├── Ressources TIPE/
+│   │   │   ├── CHAPITRE GC4 Procédés de rectification.pdf
+│   │   │   ├── CHAPITRE MF5 Physique des interfaces.pdf
+│   │   │   └── TP M3 Tension superficielle.pdf
+│   │   ├── Exemple cahier de laboratoire.docx
+│   │   ├── Fiche préparatoire du livrable TIPE.docx
+│   │   ├── Fiche type matériel.docx
+│   │   ├── Je réalise mon Power Point de TIPE.pptx
+│   │   ├── Mon TIPE.jpg
+│   │   └── TIPE_2026_Attendus_Pedagogiques.pdf
+│   ├── Travaux Pratiques/
+│   │   ├── Gestion des incertitudes/
+│   │   │   ├── CN0 Traitements des données et des incertitudes.pdf
+│   │   │   ├── Exemple incertitude montecarlo.py
+│   │   │   ├── Fiche Outils 3 Introduction à la métrologie BILAN.pdf
+│   │   │   └── Fiche Outils 3 Introduction à la métrologie.pdf
+│   │   ├── Notice/
+│   │   │   ├── Balance Mettler Toledo.pdf
+│   │   │   ├── Balance OHAUS Traveler_Manual_Multi.pdf
+│   │   │   ├── Balance Sartorius série LP (Chimie).pdf
+│   │   │   ├── DataSheet AD633 (Annexe TP6).pdf
+│   │   │   ├── datasheet Composant 4016.pdf
+│   │   │   ├── DataSheet_ALI_tl081h.pdf
+│   │   │   ├── Ecran oscilloscope.pdf
+│   │   │   ├── GBF Métrix MTX3240 Notice.pdf
+│   │   │   ├── JEULIN - Thermomètre type K.pdf
+│   │   │   ├── Logiciel Latis Pro.pdf
+│   │   │   ├── multimeter_MTX_3250 notice.pdf
+│   │   │   ├── Multimère sevenmulti Mettler (chimie).pdf
+│   │   │   ├── Multimètre UNI-T UT803.pdf
+│   │   │   ├── Oscillo_SDS1000DL_UserManual.pdf
+│   │   │   ├── P70.24_Centrale dacquisition Sysam SP5_EUROSMART.pdf
+│   │   │   ├── PX120-wattmetre-metrix-FR.pdf
+│   │   │   ├── SDG1000X_Manual_EN.pdf
+│   │   │   ├── Spectro SECOMAM UVI light XT 2 et XT 5.pdf
+│   │   │   ├── Sysam.pdf
+│   │   │   ├── Teslamètre Jeulin.pdf
+│   │   │   ├── TP2 Annexe DataSheet_ALI_tl081h.pdf
+│   │   │   └── wattmètre ISW 8000.pdf
+│   │   ├── TP de Chimie/
+│   │   │   ├── TP X3 Courbes intensité-potentiel.pdf
+│   │   │   ├── TPX1 calorimetrie.pdf
+│   │   │   └── TPX2 Mesure d'une constante de réaction.pdf
+│   │   └── TP de Physique/
+│   │       ├── TP0 Etude des oscillations forcées.pdf
+│   │       ├── TP1 Filtre RC.pdf
+│   │       ├── TP10 Mesure de l'épaisseur d'une feuille de papier.pdf
+│   │       ├── TP11 Étude de la propagation d’une onde dans un câble coaxial.pdf
+│   │       ├── TP12 Milieu ferromagnétique.pdf
+│   │       ├── TP13 etude d'un transformateur.pdf
+│   │       ├── TP2 Annexe DataSheet_ALI_tl081h.pdf
+│   │       ├── TP2 Introduction à l'ALI.pdf
+│   │       ├── TP3 Montages intégrateur et dérivateur.pdf
+│   │       ├── TP4 ALI saturé.pdf
+│   │       ├── TP5 Oscillateur de Wien.pdf
+│   │       ├── TP6 Annexe DataSheet AD633.pdf
+│   │       ├── TP6 Modulation démodulation.pdf
+│   │       ├── TP7 datasheet Composant 4016.pdf
+│   │       ├── TP7 Frequency Measurement with a Stroboscope.avi
+│   │       ├── TP7 Numerisation dun signal.pdf
+│   │       ├── TP8 filtrage numérique.pdf
+│   │       ├── TP8 filtrage_son.mp3
+│   │       ├── TP9 datasheet phototransistor.pdf
+│   │       └── TP9 Polarisation rectiligne Loi de Malus.pdf
+│   ├── Points Clés PSI.pdf
+│   └── Points Clés SUP.pdf
+├── SI/
+│   ├── DM/
+│   │   ├── CCINP-PSI-2023-ChariotJacXsonU70-Sujet.pdf
+│   │   ├── CCINP-PSI-Mod-2022-Sismometres-Corrige.pdf
+│   │   ├── CCINP-PSI-Mod-2022-Sismometres-Sujet.pdf
+│   │   ├── CCMP-PSI-2023-SEIS-Sujet.pdf
+│   │   ├── CCS-PSI-2023-ExosqueletteAtalante-Sujet.pdf
+│   │   ├── DM-rentree-25.pdf
+│   │   ├── DM-rentree-PSI-2025-corrigé.pdf
+│   │   ├── DM-toussaint-25-vanne-GTA-corrigé.pdf
+│   │   ├── DM-toussaint-25-vanne-GTA.pdf
+│   │   └── Régulation GTA Annexes.pdf
+│   ├── DS/
+│   │   ├── CCINP-PSI-2023-ChariotJacXsonU70-Sujet.pdf
+│   │   ├── CCINP-PSI-2024-PincesBrucellesHaptique-Sujet.pdf
+│   │   ├── CCMP-PSI-2024-InverseurDePoussee-Sujet.pdf
+│   │   ├── CCS-PSI-2024-DroidesAutonomes-Sujet.pdf
+│   │   ├── PSI ds25-1-corrige.pdf
+│   │   ├── PSI ds25-1.pdf
+│   │   ├── PSI ds25-2-corrigé.pdf
+│   │   ├── PSI ds25-2.pdf
+│   │   ├── PSI ds25-3-corrigé-CCINP2019.pdf
+│   │   ├── PSI ds25-3-DR.pdf
+│   │   └── PSI ds25-3.pdf
+│   ├── dynamique/
+│   │   ├── cours/
+│   │   │   ├── dyn-ch1-cinetique.pdf
+│   │   │   ├── dyn-ch2-PFD.pdf
+│   │   │   └── dyn-ch3-TEC.pdf
+│   │   └── td/
+│   │       ├── PFD-TD1.pdf
+│   │       ├── PFD-TD1_corrige.pdf
+│   │       ├── PFD-TD2-cor.pdf
+│   │       ├── PFD-TD2.pdf
+│   │       ├── PFD-TD3-corrigé.pdf
+│   │       ├── PFD-TD3.pdf
+│   │       ├── PFD-TD4-corrigé.pdf
+│   │       ├── PFD-TD4.pdf
+│   │       ├── PFD-TD5-cor.pdf
+│   │       ├── PFD-TD5.pdf
+│   │       ├── PFD-TDL1.pdf
+│   │       ├── PFD-TDL2.pdf
+│   │       ├── tec-TD1-cor.pdf
+│   │       ├── tec-TD1.pdf
+│   │       ├── tec-TD2-cor.pdf
+│   │       ├── tec-TD2.pdf
+│   │       ├── TEC-TD3-corrige.pdf
+│   │       ├── tec-TD3.pdf
+│   │       ├── tec-TD4-corrigé.pdf
+│   │       └── tec-TD4.pdf
+│   ├── IA/
+│   │   ├── IA.pdf
+│   │   └── TD-IA.pdf
+│   ├── info/
+│   │   ├── methode_rectangle.py
+│   │   ├── methode_trapezes.py
+│   │   ├── resolution_numerique_synthese.pdf
+│   │   ├── resolution_numerique_TP1.pdf
+│   │   ├── resolution_numerique_TP2.pdf
+│   │   ├── solution_dicho.py
+│   │   ├── solution_newton.py
+│   │   ├── trace_derive.py
+│   │   ├── trace_euler1.py
+│   │   └── trace_euler2.py
+│   ├── ORAUX/
+│   │   ├── moteur brushless/
+│   │   │   ├── Brushless DC Motor How it works.mp4
+│   │   │   ├── Comment un moteur brushless fonctionne.mp4
+│   │   │   └── Moteur_Brushless_7.pdf
+│   │   ├── moteur cc/
+│   │   │   ├── Diapositive 1.swf
+│   │   │   ├── fixprompt.js
+│   │   │   ├── index.html
+│   │   │   ├── MCC-diapos.pdf
+│   │   │   └── MCC.ppt
+│   │   ├── CCS_2025_PSI.pdf
+│   │   ├── ch1-Outils de répresentation fonctionnelle.pdf
+│   │   ├── ch2-Les capteurs.pdf
+│   │   ├── ch3-Les transmetteurs.pdf
+│   │   ├── Notice_interENS_2025_site.pdf
+│   │   ├── ORAUX PSI.pdf
+│   │   ├── TP-SII-PSI-CCINP.pdf
+│   │   └── TP-SII-PSI-Mines-Ponts.pdf
+│   ├── posters/
+│   │   ├── Poster cinématique.pdf
+│   │   ├── Poster performances des SLCI.pdf
+│   │   ├── poster statique.pdf
+│   │   ├── Poster-slci-bodes.pdf
+│   │   └── Poster-slci_1.pdf
+│   ├── revision/
+│   │   ├── revision-TD0-cor.pdf
+│   │   ├── revision-TD0.pdf
+│   │   ├── revision-TD1-cor.pdf
+│   │   ├── revision-TD1.pdf
+│   │   ├── revision-TD2-cor.pdf
+│   │   ├── revision-TD2.pdf
+│   │   ├── revision-TD3-cor.pdf
+│   │   ├── revision-TD3.pdf
+│   │   ├── revision-TD4-cor.pdf
+│   │   ├── revision-TD4.pdf
+│   │   ├── revision-TD5-cor.pdf
+│   │   └── revision-TD5.pdf
+│   ├── SLCI/
+│   │   ├── cours/
+│   │   │   ├── slci2-ch1-modèles_et_leurs_limites.pdf
+│   │   │   └── slci2-ch2-corriger_un_systeme_asservi.pdf
+│   │   └── td/
+│   │       ├── correction-des-asservissements-TD1-cor.pdf
+│   │       ├── correction-des-asservissements-TD1.pdf
+│   │       ├── correction-des-asservissements-TD2-cor.pdf
+│   │       ├── correction-des-asservissements-TD2.pdf
+│   │       ├── correction-des-asservissements-TD3-cor.pdf
+│   │       ├── correction-des-asservissements-TD3.pdf
+│   │       ├── modèle-et-limites-TD1-cor.pdf
+│   │       └── modèle-et-limites-TD1.pdf
+│   ├── Théorie des mecanismes/
+│   │   ├── cours/
+│   │   │   ├── ch1_schema_cinematique.pdf
+│   │   │   ├── ch2_chaînes_de_solides.pdf
+│   │   │   └── ch3_hyperstatisme.pdf
+│   │   └── td/
+│   │       ├── hyperstatisme-TD1-cor.pdf
+│   │       ├── hyperstatisme-TD1.pdf
+│   │       ├── hyperstatisme-TD2-cor.pdf
+│   │       ├── hyperstatisme-TD2.pdf
+│   │       ├── hyperstatisme-TD3-cor.pdf
+│   │       ├── hyperstatisme-TD3.pdf
+│   │       └── hyperstatisme-TDL.pdf
+│   ├── TP/
+│   │   └── TP-serie1/
+│   │       ├── cordeuse_tp3/
+│   │       │   ├── c-cordeuse_modelisation_tp3.zcos
+│   │       │   ├── cordeuse-TP3-annexes.pdf
+│   │       │   ├── Cordeuse_TP3.1.pdf
+│   │       │   └── Cordeuse_TP3.2.pdf
+│   │       ├── drone_tp3/
+│   │       │   ├── D2C-TP3-ressources.pdf
+│   │       │   ├── D2C_boucle_vitesse_acompleter.zcos
+│   │       │   ├── Drone_TP3.1.pdf
+│   │       │   └── Drone_TP3.2.pdf
+│   │       └── volant_tp3/
+│   │           ├── Assemblage_complet_volantG27.easm
+│   │           ├── Essaidelachevolant.zcos
+│   │           ├── moteurvolant.zcos
+│   │           ├── positionBFvolant.zcos
+│   │           ├── volant-TP3.1.pdf
+│   │           └── volant-TP3.2.pdf
+│   ├── Colloscope PSI RG 2025-2026 semaines 12 a- 25 v1-1.pdf
+│   ├── Colloscope PSI RG 2025_2026 semaines 1 à 14 v2.pdf
+│   ├── Groupes et trinômes PSI RG 2025-2026.pdf
+│   ├── Planning PSI RG 2025_2026 v2.pdf
+│   ├── trombi PCSI 2025-26.pdf
+│   └── trombi PSI 2025-26.pdf
+├── SI PCSI/
+│   ├── Analyse syst‚mique/
+│   │   ├── cours/
+│   │   │   ├── Analyse_fonctionnelle_2021-diapos.pdf
+│   │   │   ├── ch1-Outils de r‚presentation fonctionnelle.pdf
+│   │   │   ├── ch2-Les capteurs.pdf
+│   │   │   ├── ch3-Les transmetteurs.pdf
+│   │   │   └── ing‚nieurie_systŠme-diapos.pdf
+│   │   └── td/
+│   │       ├── analyse des systemes-TD1-cor.pdf
+│   │       ├── ch1-analyse des systemes-TD1.pdf
+│   │       ├── ch1-analyse des systemes-TD2.pdf
+│   │       ├── ch1-analyse des systemes-TD3.pdf
+│   │       ├── ch1-analyse des systemes-TD3_cor.pdf
+│   │       ├── ch1-analyse des systemes-TDlibre.pdf
+│   │       ├── ch1analyse des systemes-TD2-cor.pdf
+│   │       ├── ch3-transformateur td1-corrig‚.pdf
+│   │       ├── ch3-transformateur td1.pdf
+│   │       ├── ch3-transformateur td2-corrig‚.pdf
+│   │       ├── ch3-transformateur td2.pdf
+│   │       ├── ch3-transformateur td3-corrig‚.pdf
+│   │       └── ch3-transformateur td3.pdf
+│   ├── cin‚matique/
+│   │   ├── cours/
+│   │   │   ├── cinem_ch1_modelisation.pdf
+│   │   │   ├── cinem_ch2_cinematique-du-point.pdf
+│   │   │   ├── cinem_ch3_cinematique-du-solide.pdf
+│   │   │   ├── cinem_ch4_composition-des-mouvements.pdf
+│   │   │   └── Poster cin‚matique.pdf
+│   │   └── td/
+│   │       ├── ch1_cinem_modeliser-TD1.pdf
+│   │       ├── ch1_cinem_modeliser-TD2.pdf
+│   │       ├── ch1_cinem_modeliser-TD3.pdf
+│   │       ├── ch1_cinem_modeliser-TD3_cor.pdf
+│   │       ├── ch1_cinem_modeliser-TD4-cor.pdf
+│   │       ├── ch1_cinem_modeliser-TD4.pdf
+│   │       ├── ch1_cinem_modeliser-TDL.pdf
+│   │       ├── ch1_cinem_modeliser-TDL2.pdf
+│   │       ├── ch2_vit_et_acc-TD1.pdf
+│   │       ├── ch2_vit_et_acc-TD1_cor.pdf
+│   │       ├── ch2_vit_et_acc-TD2-cor.pdf
+│   │       ├── ch2_vit_et_acc-TD2.pdf
+│   │       ├── ch3_champ_des_ vits-TD1.pdf
+│   │       ├── ch3_champ_des_ vits-TD2.pdf
+│   │       ├── ch4_composition_des_mouvements-TD1.pdf
+│   │       ├── ch4_composition_des_mouvements-TD2.pdf
+│   │       ├── ch4_composition_des_mouvements-TD3.pdf
+│   │       ├── ch4_composition_des_mouvements-TDL.pdf
+│   │       ├── cinematique-TDS1-cor.pdf
+│   │       ├── cinematique-TDS1.pdf
+│   │       ├── cinematique-TDS2-cor.pdf
+│   │       └── cinematique-TDS2.pdf
+│   ├── DM/
+│   │   ├── DM-mai-2025-corrig‚.pdf
+│   │   ├── Dm_mai_25.pdf
+│   │   ├── dm_mars_2025-corrige.pdf
+│   │   ├── DM_mars_2025.pdf
+│   │   ├── PCSI-DM-no‰l-2024-corrig‚.pdf
+│   │   ├── PCSI-DM-toussaint-corrig‚.pdf
+│   │   ├── PCSI-DM-toussaint24.pdf
+│   │   └── PCSI_DM_No‰l24.pdf
+│   ├── DS/
+│   │   ├── PCSI ds24-1-corrige.pdf
+│   │   ├── PCSI ds24-1.pdf
+│   │   ├── PCSI ds24-2-corrig‚.pdf
+│   │   ├── PCSI ds24-2.pdf
+│   │   ├── PCSI ds24-3-corrig‚.pdf
+│   │   ├── PCSI ds24-3.pdf
+│   │   ├── PCSI ds24-4-corrig‚.pdf
+│   │   ├── PCSI ds24-4.pdf
+│   │   ├── PCSI ds24-5-corrig‚.pdf
+│   │   ├── PCSI ds24-5.pdf
+│   │   ├── PCSI ds24-6-corrig‚.pdf
+│   │   ├── PCSI ds24-6.pdf
+│   │   ├── PCSI ds24-7-CB-corrig‚.pdf
+│   │   └── PCSI ds24-7-CB.pdf
+│   ├── pySyLiC_0.39.0_win32_portable/
+│   │   ├── bin/
+│   │   │   ├── mpl-data/
+│   │   │   │   ├── fonts/
+│   │   │   │   │   ├── afm/
+│   │   │   │   │   │   ├── cmex10.afm
+│   │   │   │   │   │   ├── cmmi10.afm
+│   │   │   │   │   │   ├── cmr10.afm
+│   │   │   │   │   │   ├── cmsy10.afm
+│   │   │   │   │   │   ├── cmtt10.afm
+│   │   │   │   │   │   ├── pagd8a.afm
+│   │   │   │   │   │   ├── pagdo8a.afm
+│   │   │   │   │   │   ├── pagk8a.afm
+│   │   │   │   │   │   ├── pagko8a.afm
+│   │   │   │   │   │   ├── pbkd8a.afm
+│   │   │   │   │   │   ├── pbkdi8a.afm
+│   │   │   │   │   │   ├── pbkl8a.afm
+│   │   │   │   │   │   ├── pbkli8a.afm
+│   │   │   │   │   │   ├── pcrb8a.afm
+│   │   │   │   │   │   ├── pcrbo8a.afm
+│   │   │   │   │   │   ├── pcrr8a.afm
+│   │   │   │   │   │   ├── pcrro8a.afm
+│   │   │   │   │   │   ├── phvb8a.afm
+│   │   │   │   │   │   ├── phvb8an.afm
+│   │   │   │   │   │   ├── phvbo8a.afm
+│   │   │   │   │   │   ├── phvbo8an.afm
+│   │   │   │   │   │   ├── phvl8a.afm
+│   │   │   │   │   │   ├── phvlo8a.afm
+│   │   │   │   │   │   ├── phvr8a.afm
+│   │   │   │   │   │   ├── phvr8an.afm
+│   │   │   │   │   │   ├── phvro8a.afm
+│   │   │   │   │   │   ├── phvro8an.afm
+│   │   │   │   │   │   ├── pncb8a.afm
+│   │   │   │   │   │   ├── pncbi8a.afm
+│   │   │   │   │   │   ├── pncr8a.afm
+│   │   │   │   │   │   ├── pncri8a.afm
+│   │   │   │   │   │   ├── pplb8a.afm
+│   │   │   │   │   │   ├── pplbi8a.afm
+│   │   │   │   │   │   ├── pplr8a.afm
+│   │   │   │   │   │   ├── pplri8a.afm
+│   │   │   │   │   │   ├── psyr.afm
+│   │   │   │   │   │   ├── ptmb8a.afm
+│   │   │   │   │   │   ├── ptmbi8a.afm
+│   │   │   │   │   │   ├── ptmr8a.afm
+│   │   │   │   │   │   ├── ptmri8a.afm
+│   │   │   │   │   │   ├── putb8a.afm
+│   │   │   │   │   │   ├── putbi8a.afm
+│   │   │   │   │   │   ├── putr8a.afm
+│   │   │   │   │   │   ├── putri8a.afm
+│   │   │   │   │   │   ├── pzcmi8a.afm
+│   │   │   │   │   │   └── pzdr.afm
+│   │   │   │   │   ├── pdfcorefonts/
+│   │   │   │   │   │   ├── Courier-Bold.afm
+│   │   │   │   │   │   ├── Courier-BoldOblique.afm
+│   │   │   │   │   │   ├── Courier-Oblique.afm
+│   │   │   │   │   │   ├── Courier.afm
+│   │   │   │   │   │   ├── Helvetica-Bold.afm
+│   │   │   │   │   │   ├── Helvetica-BoldOblique.afm
+│   │   │   │   │   │   ├── Helvetica-Oblique.afm
+│   │   │   │   │   │   ├── Helvetica.afm
+│   │   │   │   │   │   ├── readme.txt
+│   │   │   │   │   │   ├── Symbol.afm
+│   │   │   │   │   │   ├── Times-Bold.afm
+│   │   │   │   │   │   ├── Times-BoldItalic.afm
+│   │   │   │   │   │   ├── Times-Italic.afm
+│   │   │   │   │   │   ├── Times-Roman.afm
+│   │   │   │   │   │   └── ZapfDingbats.afm
+│   │   │   │   │   └── ttf/
+│   │   │   │   │       ├── cmb10.ttf
+│   │   │   │   │       ├── cmex10.ttf
+│   │   │   │   │       ├── cmmi10.ttf
+│   │   │   │   │       ├── cmr10.ttf
+│   │   │   │   │       ├── cmss10.ttf
+│   │   │   │   │       ├── cmsy10.ttf
+│   │   │   │   │       ├── cmtt10.ttf
+│   │   │   │   │       ├── COPYRIGHT.TXT
+│   │   │   │   │       ├── LICENSE_STIX
+│   │   │   │   │       ├── README.TXT
+│   │   │   │   │       ├── RELEASENOTES.TXT
+│   │   │   │   │       ├── STIXGeneral.ttf
+│   │   │   │   │       ├── STIXGeneralBol.ttf
+│   │   │   │   │       ├── STIXGeneralBolIta.ttf
+│   │   │   │   │       ├── STIXGeneralItalic.ttf
+│   │   │   │   │       ├── STIXNonUni.ttf
+│   │   │   │   │       ├── STIXNonUniBol.ttf
+│   │   │   │   │       ├── STIXNonUniBolIta.ttf
+│   │   │   │   │       ├── STIXNonUniIta.ttf
+│   │   │   │   │       ├── STIXSizFiveSymReg.ttf
+│   │   │   │   │       ├── STIXSizFourSymBol.ttf
+│   │   │   │   │       ├── STIXSizFourSymReg.ttf
+│   │   │   │   │       ├── STIXSizOneSymBol.ttf
+│   │   │   │   │       ├── STIXSizOneSymReg.ttf
+│   │   │   │   │       ├── STIXSizThreeSymBol.ttf
+│   │   │   │   │       ├── STIXSizThreeSymReg.ttf
+│   │   │   │   │       ├── STIXSizTwoSymBol.ttf
+│   │   │   │   │       ├── STIXSizTwoSymReg.ttf
+│   │   │   │   │       ├── Vera.ttf
+│   │   │   │   │       ├── VeraBd.ttf
+│   │   │   │   │       ├── VeraBI.ttf
+│   │   │   │   │       ├── VeraIt.ttf
+│   │   │   │   │       ├── VeraMoBd.ttf
+│   │   │   │   │       ├── VeraMoBI.ttf
+│   │   │   │   │       ├── VeraMoIt.ttf
+│   │   │   │   │       ├── VeraMono.ttf
+│   │   │   │   │       ├── VeraSe.ttf
+│   │   │   │   │       └── VeraSeBd.ttf
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── back.pdf
+│   │   │   │   │   ├── back.png
+│   │   │   │   │   ├── back.ppm
+│   │   │   │   │   ├── back.svg
+│   │   │   │   │   ├── back.xpm
+│   │   │   │   │   ├── filesave.pdf
+│   │   │   │   │   ├── filesave.png
+│   │   │   │   │   ├── filesave.ppm
+│   │   │   │   │   ├── filesave.svg
+│   │   │   │   │   ├── filesave.xpm
+│   │   │   │   │   ├── forward.pdf
+│   │   │   │   │   ├── forward.png
+│   │   │   │   │   ├── forward.ppm
+│   │   │   │   │   ├── forward.svg
+│   │   │   │   │   ├── forward.xpm
+│   │   │   │   │   ├── hand.pdf
+│   │   │   │   │   ├── hand.png
+│   │   │   │   │   ├── hand.ppm
+│   │   │   │   │   ├── hand.svg
+│   │   │   │   │   ├── hand.xpm
+│   │   │   │   │   ├── home.pdf
+│   │   │   │   │   ├── home.png
+│   │   │   │   │   ├── home.ppm
+│   │   │   │   │   ├── home.svg
+│   │   │   │   │   ├── home.xpm
+│   │   │   │   │   ├── matplotlib.gif
+│   │   │   │   │   ├── matplotlib.pdf
+│   │   │   │   │   ├── matplotlib.png
+│   │   │   │   │   ├── matplotlib.svg
+│   │   │   │   │   ├── move.pdf
+│   │   │   │   │   ├── move.png
+│   │   │   │   │   ├── move.ppm
+│   │   │   │   │   ├── move.svg
+│   │   │   │   │   ├── move.xpm
+│   │   │   │   │   ├── qt4_editor_options.pdf
+│   │   │   │   │   ├── qt4_editor_options.png
+│   │   │   │   │   ├── qt4_editor_options.svg
+│   │   │   │   │   ├── stock_close.ppm
+│   │   │   │   │   ├── stock_close.xpm
+│   │   │   │   │   ├── stock_down.ppm
+│   │   │   │   │   ├── stock_down.xpm
+│   │   │   │   │   ├── stock_left.ppm
+│   │   │   │   │   ├── stock_left.xpm
+│   │   │   │   │   ├── stock_refresh.ppm
+│   │   │   │   │   ├── stock_refresh.xpm
+│   │   │   │   │   ├── stock_right.ppm
+│   │   │   │   │   ├── stock_right.xpm
+│   │   │   │   │   ├── stock_save_as.ppm
+│   │   │   │   │   ├── stock_save_as.xpm
+│   │   │   │   │   ├── stock_up.ppm
+│   │   │   │   │   ├── stock_up.xpm
+│   │   │   │   │   ├── stock_zoom-in.ppm
+│   │   │   │   │   ├── stock_zoom-in.xpm
+│   │   │   │   │   ├── stock_zoom-out.ppm
+│   │   │   │   │   ├── stock_zoom-out.xpm
+│   │   │   │   │   ├── subplots.pdf
+│   │   │   │   │   ├── subplots.png
+│   │   │   │   │   ├── subplots.ppm
+│   │   │   │   │   ├── subplots.svg
+│   │   │   │   │   ├── subplots.xpm
+│   │   │   │   │   ├── zoom_to_rect.pdf
+│   │   │   │   │   ├── zoom_to_rect.png
+│   │   │   │   │   ├── zoom_to_rect.ppm
+│   │   │   │   │   ├── zoom_to_rect.svg
+│   │   │   │   │   └── zoom_to_rect.xpm
+│   │   │   │   ├── sample_data/
+│   │   │   │   │   ├── axes_grid/
+│   │   │   │   │   │   └── bivariate_normal.npy
+│   │   │   │   │   ├── aapl.csv
+│   │   │   │   │   ├── AAPL.dat.gz
+│   │   │   │   │   ├── aapl.npy.gz
+│   │   │   │   │   ├── ada.png
+│   │   │   │   │   ├── ct.raw.gz
+│   │   │   │   │   ├── data_x_x2_x3.csv
+│   │   │   │   │   ├── demodata.csv
+│   │   │   │   │   ├── eeg.dat
+│   │   │   │   │   ├── embedding_in_wx3.xrc
+│   │   │   │   │   ├── goog.npy
+│   │   │   │   │   ├── grace_hopper.jpg
+│   │   │   │   │   ├── grace_hopper.png
+│   │   │   │   │   ├── INTC.dat.gz
+│   │   │   │   │   ├── jacksboro_fault_dem.npz
+│   │   │   │   │   ├── logo2.png
+│   │   │   │   │   ├── membrane.dat
+│   │   │   │   │   ├── Minduka_Present_Blue_Pack.png
+│   │   │   │   │   ├── msft.csv
+│   │   │   │   │   ├── necked_tensile_specimen.png
+│   │   │   │   │   ├── None_vs_nearest-pdf.png
+│   │   │   │   │   ├── percent_bachelors_degrees_women_usa.csv
+│   │   │   │   │   ├── README.txt
+│   │   │   │   │   └── s1045.ima.gz
+│   │   │   │   ├── stylelib/
+│   │   │   │   │   ├── bmh.mplstyle
+│   │   │   │   │   ├── classic.mplstyle
+│   │   │   │   │   ├── dark_background.mplstyle
+│   │   │   │   │   ├── fivethirtyeight.mplstyle
+│   │   │   │   │   ├── ggplot.mplstyle
+│   │   │   │   │   ├── grayscale.mplstyle
+│   │   │   │   │   ├── seaborn-bright.mplstyle
+│   │   │   │   │   ├── seaborn-colorblind.mplstyle
+│   │   │   │   │   ├── seaborn-dark-palette.mplstyle
+│   │   │   │   │   ├── seaborn-dark.mplstyle
+│   │   │   │   │   ├── seaborn-darkgrid.mplstyle
+│   │   │   │   │   ├── seaborn-deep.mplstyle
+│   │   │   │   │   ├── seaborn-muted.mplstyle
+│   │   │   │   │   ├── seaborn-notebook.mplstyle
+│   │   │   │   │   ├── seaborn-paper.mplstyle
+│   │   │   │   │   ├── seaborn-pastel.mplstyle
+│   │   │   │   │   ├── seaborn-poster.mplstyle
+│   │   │   │   │   ├── seaborn-talk.mplstyle
+│   │   │   │   │   ├── seaborn-ticks.mplstyle
+│   │   │   │   │   ├── seaborn-white.mplstyle
+│   │   │   │   │   └── seaborn-whitegrid.mplstyle
+│   │   │   │   ├── lineprops.glade
+│   │   │   │   └── matplotlibrc
+│   │   │   ├── _ctypes.pyd
+│   │   │   ├── _multiprocessing.pyd
+│   │   │   ├── _socket.pyd
+│   │   │   ├── _winxptheme.pyd
+│   │   │   ├── bz2.pyd
+│   │   │   ├── libifcoremd.dll
+│   │   │   ├── libiomp5md.dll
+│   │   │   ├── libmmd.dll
+│   │   │   ├── library.zip
+│   │   │   ├── matplotlib._cntr.pyd
+│   │   │   ├── matplotlib._contour.pyd
+│   │   │   ├── matplotlib.backends._backend_agg.pyd
+│   │   │   ├── matplotlib.ft2font.pyd
+│   │   │   ├── matplotlib.ttconv.pyd
+│   │   │   ├── mfc90.dll
+│   │   │   ├── Microsoft.VC90.CRT.manifest
+│   │   │   ├── msvcm90.dll
+│   │   │   ├── msvcp90.dll
+│   │   │   ├── MSVCR90.dll
+│   │   │   ├── numpy.core.multiarray.pyd
+│   │   │   ├── numpy.core.umath.pyd
+│   │   │   ├── numpy.fft.fftpack_lite.pyd
+│   │   │   ├── numpy.linalg._umath_linalg.pyd
+│   │   │   ├── numpy.linalg.lapack_lite.pyd
+│   │   │   ├── numpy.random.mtrand.pyd
+│   │   │   ├── pyexpat.pyd
+│   │   │   ├── pySyLiC.exe
+│   │   │   ├── pySyLiC.zip
+│   │   │   ├── python27.dll
+│   │   │   ├── pythoncom27.dll
+│   │   │   ├── pywintypes27.dll
+│   │   │   ├── scipy.fftpack._fftpack.pyd
+│   │   │   ├── scipy.fftpack.convolve.pyd
+│   │   │   ├── scipy.integrate._dop.pyd
+│   │   │   ├── scipy.integrate._odepack.pyd
+│   │   │   ├── scipy.integrate._quadpack.pyd
+│   │   │   ├── scipy.integrate.lsoda.pyd
+│   │   │   ├── scipy.integrate.vode.pyd
+│   │   │   ├── scipy.interpolate._fitpack.pyd
+│   │   │   ├── scipy.interpolate._ppoly.pyd
+│   │   │   ├── scipy.interpolate.dfitpack.pyd
+│   │   │   ├── scipy.interpolate.interpnd.pyd
+│   │   │   ├── scipy.linalg._calc_lwork.pyd
+│   │   │   ├── scipy.linalg._decomp_update.pyd
+│   │   │   ├── scipy.linalg._fblas.pyd
+│   │   │   ├── scipy.linalg._flapack.pyd
+│   │   │   ├── scipy.linalg._solve_toeplitz.pyd
+│   │   │   ├── scipy.linalg.cython_blas.pyd
+│   │   │   ├── scipy.linalg.cython_lapack.pyd
+│   │   │   ├── scipy.ndimage._nd_image.pyd
+│   │   │   ├── scipy.ndimage._ni_label.pyd
+│   │   │   ├── scipy.optimize._cobyla.pyd
+│   │   │   ├── scipy.optimize._group_columns.pyd
+│   │   │   ├── scipy.optimize._lbfgsb.pyd
+│   │   │   ├── scipy.optimize._lsq.givens_elimination.pyd
+│   │   │   ├── scipy.optimize._minpack.pyd
+│   │   │   ├── scipy.optimize._nnls.pyd
+│   │   │   ├── scipy.optimize._slsqp.pyd
+│   │   │   ├── scipy.optimize._zeros.pyd
+│   │   │   ├── scipy.optimize.minpack2.pyd
+│   │   │   ├── scipy.optimize.moduleTNC.pyd
+│   │   │   ├── scipy.signal._max_len_seq_inner.pyd
+│   │   │   ├── scipy.signal._spectral.pyd
+│   │   │   ├── scipy.signal._upfirdn_apply.pyd
+│   │   │   ├── scipy.signal.sigtools.pyd
+│   │   │   ├── scipy.signal.spline.pyd
+│   │   │   ├── scipy.sparse._csparsetools.pyd
+│   │   │   ├── scipy.sparse._sparsetools.pyd
+│   │   │   ├── scipy.sparse.csgraph._min_spanning_tree.pyd
+│   │   │   ├── scipy.sparse.csgraph._reordering.pyd
+│   │   │   ├── scipy.sparse.csgraph._shortest_path.pyd
+│   │   │   ├── scipy.sparse.csgraph._tools.pyd
+│   │   │   ├── scipy.sparse.csgraph._traversal.pyd
+│   │   │   ├── scipy.sparse.linalg.dsolve._superlu.pyd
+│   │   │   ├── scipy.sparse.linalg.eigen.arpack._arpack.pyd
+│   │   │   ├── scipy.sparse.linalg.isolve._iterative.pyd
+│   │   │   ├── scipy.spatial._distance_wrap.pyd
+│   │   │   ├── scipy.spatial.ckdtree.pyd
+│   │   │   ├── scipy.spatial.qhull.pyd
+│   │   │   ├── scipy.special._comb.pyd
+│   │   │   ├── scipy.special._ellip_harm_2.pyd
+│   │   │   ├── scipy.special._ufuncs.pyd
+│   │   │   ├── scipy.special._ufuncs_cxx.pyd
+│   │   │   ├── scipy.special.specfun.pyd
+│   │   │   ├── scipy.stats._stats.pyd
+│   │   │   ├── scipy.stats.mvn.pyd
+│   │   │   ├── scipy.stats.statlib.pyd
+│   │   │   ├── select.pyd
+│   │   │   ├── unicodedata.pyd
+│   │   │   ├── win32api.pyd
+│   │   │   ├── win32gui.pyd
+│   │   │   ├── win32pdh.pyd
+│   │   │   ├── win32pipe.pyd
+│   │   │   ├── win32ui.pyd
+│   │   │   ├── win32wnet.pyd
+│   │   │   ├── winxpgui.pyd
+│   │   │   ├── wx._combo.pyd
+│   │   │   ├── wx._controls_.pyd
+│   │   │   ├── wx._core_.pyd
+│   │   │   ├── wx._gdi_.pyd
+│   │   │   ├── wx._misc_.pyd
+│   │   │   ├── wx._windows_.pyd
+│   │   │   ├── wx._xrc.pyd
+│   │   │   ├── wxbase30u_net_vc90.dll
+│   │   │   ├── wxbase30u_vc90.dll
+│   │   │   ├── wxbase30u_xml_vc90.dll
+│   │   │   ├── wxmsw30u_adv_vc90.dll
+│   │   │   ├── wxmsw30u_core_vc90.dll
+│   │   │   ├── wxmsw30u_html_vc90.dll
+│   │   │   └── wxmsw30u_xrc_vc90.dll
+│   │   ├── locale/
+│   │   │   └── en/
+│   │   │       └── LC_MESSAGES/
+│   │   │           ├── pysylic.mo
+│   │   │           └── pysylic.po
+│   │   ├── LICENSE.txt
+│   │   ├── PySyLiC.cfg
+│   │   └── pySyLiC.exe.log
+│   ├── SED/
+│   │   ├── cours/
+│   │   │   ├── SED_Ch1_codage de l'information.pdf
+│   │   │   └── SED_Ch2_Modelisation_des_sytemes_discrets.pdf
+│   │   └── td/
+│   │       ├── ch1 - codage_de_l'information-TD1.pdf
+│   │       ├── ch1 - codage_de_l'information-TD2-cor.pdf
+│   │       ├── ch1 - codage_de_l'information-TD2.pdf
+│   │       ├── ch1 - codage_de_l'information-TD3-cor.pdf
+│   │       ├── ch1 - codage_de_l'information-TD3.pdf
+│   │       ├── ch1 - codage_de_l'information-TD4.pdf
+│   │       ├── ch1 - codage_de_l'information-TD5.pdf
+│   │       ├── ch1 - codage_de_l'information-TDL.pdf
+│   │       ├── ch1 - codage_de_l'information-TDL2.pdf
+│   │       ├── SED-TD1.pdf
+│   │       ├── SED-TD2-cor.pdf
+│   │       ├── SED-TD2.pdf
+│   │       ├── SED-TD3-corrig‚.pdf
+│   │       └── SED-TD3.pdf
+│   ├── SLCI/
+│   │   ├── cours/
+│   │   │   ├── Poster-slci_1.pdf
+│   │   │   ├── slci-ch1-pr‚sentation.pdf
+│   │   │   ├── slci-ch2-mod‚lisation.pdf
+│   │   │   ├── slci-ch3-premier-ordre.pdf
+│   │   │   ├── slci-ch4-second-ordre.pdf
+│   │   │   ├── slci-ch5-bouclage.pdf
+│   │   │   ├── slci-ch6-frequentiel.pdf
+│   │   │   └── slci-ch7-performances.pdf
+│   │   └── td/
+│   │       ├── Ch1_Presentation_SLCI-TD1-corrige.pdf
+│   │       ├── Ch1_Presentation_SLCI-TD1.pdf
+│   │       ├── Ch2-Mod‚lisation des SLCI-TDL.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD1.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD2-corrige.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD2.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD2_corrig‚.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD3.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD4-indices.pdf
+│   │       ├── Ch2_Mod‚lisation des SLCI-TD4.pdf
+│   │       ├── Ch3-4_Identification des SLCI-TD1-cor.pdf
+│   │       ├── Ch3-4_Identification des SLCI-TD1.pdf
+│   │       ├── Ch3-4_Mod‚lisation MCC.pdf
+│   │       ├── Ch3-4_SLCI 1er&2nd ordre-TD1-corrig‚.pdf
+│   │       ├── Ch3-4_SLCI 1er&2nd ordre-TD1.pdf
+│   │       ├── Ch3-4_SLCI 1er&2nd ordre-TDL.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD1.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD2.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD3-corrig‚.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD3.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD4-cor.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TD4.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TDL1.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TDL2.pdf
+│   │       ├── Ch5_SLCI boucl‚s-TDL3.pdf
+│   │       ├── Ch6-7_performances-corr.pdf
+│   │       ├── Ch6-7_performances.pdf
+│   │       ├── Etude fr‚quentielle des SLCI-td.pdf
+│   │       ├── Etude fr‚quentielle des SLCI-tdL-aide.pdf
+│   │       └── Etude fr‚quentielle des SLCI-tdL.pdf
+│   ├── statique/
+│   │   ├── cours/
+│   │   │   ├── ch1_modelisation_des_actions_ m‚caniques.pdf
+│   │   │   ├── ch2_PFS.pdf
+│   │   │   └── ch3_frottements.pdf
+│   │   └── td/
+│   │       ├── ch1_actions_m‚ca-TD1-cor.pdf
+│   │       ├── ch1_actions_m‚ca-TD1.pdf
+│   │       ├── ch1_actions_m‚ca-TD2-cor.pdf
+│   │       ├── ch1_actions_m‚ca-TD2.pdf
+│   │       ├── ch1_actions_m‚ca-TD3-cor.pdf
+│   │       ├── ch1_actions_m‚ca-TD3.pdf
+│   │       ├── ch1_actions_m‚ca-TDL.pdf
+│   │       ├── ch2-PFS-TD3-corrig‚.pdf
+│   │       ├── ch2-PFS-TD3.pdf
+│   │       ├── ch2-PFS-TD4-corrig‚.pdf
+│   │       ├── ch2-PFS-TD4.pdf
+│   │       ├── ch2-PFS-TD5-corrig‚.pdf
+│   │       ├── ch2-PFS-TD5.pdf
+│   │       ├── ch2_PFS-TD1-bis.pdf
+│   │       ├── ch2_PFS-TD1.pdf
+│   │       ├── ch2_PFS-TD2.pdf
+│   │       ├── ch2_PFS-TDL.pdf
+│   │       ├── ch2_PFS-TDL2.pdf
+│   │       ├── ch3_ frottements-TD1.pdf
+│   │       ├── ch3_frottements-TD1-corrig‚.pdf
+│   │       ├── ch3_frottements-TD2.pdf
+│   │       ├── ch3_frottements-TD3.pdf
+│   │       ├── ch3_frottements-TD4.pdf
+│   │       └── ch3_frottements-TDL.pdf
+│   ├── Th‚orie des m‚canismes/
+│   │   ├── cours/
+│   │   │   ├── ch1_schema_cinematique.pdf
+│   │   │   ├── ch2_chaŒnes_de_solides.pdf
+│   │   │   └── liaisons normalis‚es.pdf
+│   │   └── td/
+│   │       ├── commande de soupape/
+│   │       │   ├── Came-soupape-1.wmv
+│   │       │   ├── commande de soupape-diapos.pdf
+│   │       │   ├── commande de soupape.ppsx
+│   │       │   ├── commande de soupape.ppt
+│   │       │   ├── ducati.wmv
+│   │       │   ├── moteur.wmv
+│   │       │   ├── Moteur_Renault_M9R_-_UPSTI_.wmv
+│   │       │   ├── Rotulage du linguet.failed-conv.flv
+│   │       │   └── Rotulage.mpg
+│   │       ├── perforatrice/
+│   │       │   ├── perforatrice-diapo.pdf
+│   │       │   ├── perforatrice.ppsx
+│   │       │   └── perforatrice.ppt
+│   │       ├── Borne reglable ensemble.mp4
+│   │       ├── Ch1_m‚canisme-TD1.pdf
+│   │       ├── Ch1_m‚canisme-TD2.pdf
+│   │       ├── Ch1_m‚canisme-TD3.pdf
+│   │       ├── Ch1_m‚canisme-TD4.pdf
+│   │       └── Ch1_m‚canisme-TDL.pdf
+│   ├── TP/
+│   │   ├── compte-rendus-serie1-notes/
+│   │   │   ├── CAO/
+│   │   │   │   ├── Arielle.MacaireNoahTP1.SLDPRT
+│   │   │   │   ├── bouttefroy sauel  TP1.SLDPRT
+│   │   │   │   ├── Fiacre.Martin.SLDPRT
+│   │   │   │   ├── Francoise.Cyil_TP1_SI.SLDPRT
+│   │   │   │   ├── Grondin.Lucas_TP1.SLDPRT
+│   │   │   │   ├── Julie.hugo tp2.SLDPRT
+│   │   │   │   ├── lagier.nathan_TP1.SLDPRT
+│   │   │   │   ├── laurence.enzo_TP1.SLDPRT
+│   │   │   │   ├── maillot.matheo_TP1.SLDPRT
+│   │   │   │   ├── peters raphael tp 1.SLDPRT
+│   │   │   │   ├── Pierre.gonthier_TP1.SLDPRT
+│   │   │   │   ├── shayna.leriaTP1.SLDPRT
+│   │   │   │   ├── tenor.noa_TP2.SLDPRT
+│   │   │   │   ├── zaneguy.lucas_TP1.SLDPRT
+│   │   │   │   └── ~$bouttefroy sauel  TP1.SLDPRT
+│   │   │   ├── Cordeuse/
+│   │   │   │   ├── Jaoen Yann Luca.odt
+│   │   │   │   ├── LagierN..odt
+│   │   │   │   ├── Lucas,Raphael,Martin.odt
+│   │   │   │   ├── Mendrika-Manella-Cordeuse.odt
+│   │   │   │   ├── Pierre-Hugo-Noa-Cordeuse.odt
+│   │   │   │   └── SamuelShaynaArielle.odt
+│   │   │   ├── Drone/
+│   │   │   │   ├── Capture CURBSIM.PNG
+│   │   │   │   ├── CURB SIM.csv
+│   │   │   │   ├── GIRONCELCESSOU-PICARD-TRAVAGLINI--TPDRONE.odt
+│   │   │   │   ├── kheroddin_robert_maillot_drone.odt
+│   │   │   │   ├── Menendez Eline-Etheve Olivier-Clara Hoareau.odt
+│   │   │   │   ├── MESURE 2.csv
+│   │   │   │   ├── MESUSUR.csv
+│   │   │   │   ├── PAYET_RIVIERE_DORIS.odt
+│   │   │   │   ├── SEVIN_ZANEGUY_LAURENCE.odt
+│   │   │   │   ├── TECHER-FRANCOISE-MUSTUN-TPDRONE.odt
+│   │   │   │   ├── TEX.pdf
+│   │   │   │   ├── Travaglini.Alicia_TP1.SLDPRT
+│   │   │   │   ├── TX2.pdf
+│   │   │   │   ├── zaneguy Mesure graphique.PNG
+│   │   │   │   ├── Zaneguy Mesure.csv
+│   │   │   │   └── ~$Travaglini.Alicia_TP1.SLDPRT
+│   │   │   ├── Maxpid/
+│   │   │   │   ├── Capture S.PNG
+│   │   │   │   ├── Capture2.PNG
+│   │   │   │   ├── Etheve-Hoareau-Menendez- Maxpid.odt
+│   │   │   │   ├── Gironcel-Cessou,Picard,Travaglini.odt
+│   │   │   │   ├── Maillot F, Robert, Kheroddin Maxpid.odt
+│   │   │   │   ├── MAXPID_Doris_Payet_Riviere.odt
+│   │   │   │   ├── MAXPID_Francoise_Mustun_Techer.odt
+│   │   │   │   └── MAXPID_Zaneguy_Sevin_Laurence.odt
+│   │   │   └── Volant/
+│   │   │       ├── Autal_Andriandaza_Volant.odt
+│   │   │       ├── bouttefroyleriamacairenoah.doc
+│   │   │       ├── bouttefroyleriamacairenoah.odt
+│   │   │       ├── GRONDIN - FIACRE - PETERS TP1.odt
+│   │   │       ├── Maillot M et lagier N.odt
+│   │   │       ├── PICARD Anne-Sophie.odt
+│   │   │       ├── Volant TP1 LuCA - jAoeN - yAnN.ost.odt
+│   │   │       └── VolantTenor,Gonthier,Julie.odt
+│   │   └── compte-rendus-serie2-notes/
+│   │       ├── maxpid/
+│   │       │   ├── AUTAL_ANDRIANDAZA.odt
+│   │       │   ├── GONTHIER TENOR JULIE.odt
+│   │       │   ├── GONTHIER TENOR JULIE.rtf
+│   │       │   ├── GRONDIN FIACRE PETERS S‚rie 2 Maxpid.odt
+│   │       │   ├── Maillot matheo Lagier nathan.odt
+│   │       │   ├── samuel,shayna,Arielle.odt
+│   │       │   └── Yann Luca Jaoen.odt
+│   │       ├── moteur/
+│   │       │   ├── bouttefroy,leria,macaire-noa.odt
+│   │       │   ├── Doris Benjamin Evan RiviŠre Simon Payet.odt
+│   │       │   ├── Gonthier,Tenor,Julie.odt
+│   │       │   ├── Grondin Peters Fiacre.odt
+│   │       │   ├── Maillot.F-KHERODDIN-ROBERT.odt
+│   │       │   ├── Maillot.M Lagier.N.odt
+│   │       │   ├── Menendez Eline et Etheve Olivier.odt
+│   │       │   ├── MoteurCC no‚mie, manellan mendrika.odt
+│   │       │   ├── MoteurCC no‚mie, manellan mendrika.rtf
+│   │       │   ├── MUSTUN_FRANCOISE.odt
+│   │       │   ├── SEVIN_ZANEGUY_LAURENCE.odt
+│   │       │   └── Yann, Luca, Jaoen.odt
+│   │       ├── solidworks/
+│   │       │   ├── andriandaza.manella_festo.SLDASM
+│   │       │   ├── bouttefroy.samuel.SLDASM
+│   │       │   ├── bouttefroy.samuel.SLDPRT
+│   │       │   ├── bouttefroy.samuel33.SLDASM
+│   │       │   ├── bouttefroy.samuelfinal.SLDPRT
+│   │       │   ├── couvercle du festo.SLDPRT
+│   │       │   ├── doris.benjamin_festo.SLDASM
+│   │       │   ├── doris.benjamin_festo.SLDPRT
+│   │       │   ├── etheve olivier festo.SLDPRT
+│   │       │   ├── FIACRE_Martin_festo.SLDASM
+│   │       │   ├── FRANCOISE.Cyril_festo.SLDASM
+│   │       │   ├── FRANCOISE.Cyril_festo.SLDPRT
+│   │       │   ├── Gonthier Pierre Dao2 fest-o.SLDASM
+│   │       │   ├── GRONDIN Lucas_FESTO.SLDASM
+│   │       │   ├── jaoen assemblage festo.SLDASM
+│   │       │   ├── Julie.hugo_festo.SLDASM
+│   │       │   ├── kheroddin.houmeyd_festo.SLDASM
+│   │       │   ├── kheroddin.houmeyd_festo.SLDPRT
+│   │       │   ├── lagier.nathan_festo.SLDASM
+│   │       │   ├── laurence.enzo_festo.SLDASM
+│   │       │   ├── laurence.enzo_festo.SLDASM.SLDPRT
+│   │       │   ├── laurence.SLDPRT
+│   │       │   ├── leria.shayna_festo..SLDASM
+│   │       │   ├── leria.shayna_festo..SLDPRT
+│   │       │   ├── leria.shayna_festo.SLDASM
+│   │       │   ├── macaire.arielle_festo..SLDASM
+│   │       │   ├── maillot.math‚o_festo.SLDASM
+│   │       │   ├── menendez.eline_festo.SLDASM
+│   │       │   ├── menendez.eline_festo2.SLDPRT
+│   │       │   ├── menendez.eline_festo_2.SLDPRT
+│   │       │   ├── Mustun.keziah maxpid.SLDASM
+│   │       │   ├── Mustun.keziah.SLDASM
+│   │       │   ├── Noemie Gironcel Assemblage1 TP2.SLDASM
+│   │       │   ├── Noemie gironcel cessou TP2 corps du festo.SLDPRT
+│   │       │   ├── PAYET.Simon_festo.SLDASM
+│   │       │   ├── payet.simon_festo.SLDPRT
+│   │       │   ├── peters.raphael_festo.SLDASM
+│   │       │   ├── peters.raphael_festo.SLDPRT
+│   │       │   ├── picard.annesophie_festo.SLDASM
+│   │       │   ├── picard.annesophie_festo.SLDPRT
+│   │       │   ├── riviere.evan_festo.SLDASM
+│   │       │   ├── robert.lea_festo.SLDASM
+│   │       │   ├── robert.lea_festo.SLDPRT
+│   │       │   ├── Seraphin.Luca_Festo.SLDASM
+│   │       │   ├── sevin.dimitri_festo.SLDASM
+│   │       │   ├── simon.payet-festo.SLDPRT
+│   │       │   ├── simon.payet_festo.SLDPRT
+│   │       │   ├── simon.payet_festo2.SLDPRT
+│   │       │   ├── zaneguy.lucas_festo.SLDASM
+│   │       │   ├── zaneguy.lucas_festo.SLDASM.SLDPRT
+│   │       │   ├── zaneguy.lucas_festo.SLDPRT
+│   │       │   ├── ~$bouttefroy.samuel.SLDASM
+│   │       │   ├── ~$bouttefroy.samuel.SLDPRT
+│   │       │   ├── ~$bouttefroy.samuelfinal.SLDPRT
+│   │       │   ├── ~$etheve olivier festo.SLDPRT
+│   │       │   ├── ~$Gonthier Pierre Dao2 fest-o.SLDASM
+│   │       │   └── ~$Noemie Gironcel Assemblage1 TP2.SLDASM
+│   │       ├── volant/
+│   │       │   ├── Maillot_Florent Kheroddin Houmeyd.odt
+│   │       │   ├── MENENDEZ - ETHEVE.odt
+│   │       │   ├── MUSTUN_FRANCOISE.odt
+│   │       │   ├── PAYET_RIVIERE.odt
+│   │       │   ├── PICARD Anne-Sophie.odt
+│   │       │   └── SEVIN_LAURENCE_ZANEGUY.odt
+│   │       ├── doris.benjamin_festo.SLDASM
+│   │       ├── Etheve olivier festo.SLDASM
+│   │       ├── Sans nom 1.odt
+│   │       └── ~$Etheve olivier festo.SLDASM
+│   ├── colloscope-PCSI-Semeste2.pdf
+│   ├── colloscope-pcsi.pdf
+│   ├── Initiation aux m‚thodes du TIPE.pdf
+│   ├── PCSI-2024-25-centrale-EDF-2.pdf
+│   ├── PCSI-2024-25-centrale-EDF.pdf
+│   ├── Planning DS PCSI 24-25.pdf
+│   ├── prog-colles-12.pdf
+│   ├── trombi PCSI 2024-25.pdf
+│   └── trombi PSI 2024-25.pdf
+├── Projection Progression des enseignements de Sc. Phys. en PSI année 2025-2026  - Feuille 1.pdf
+└── Semainier PSI 2025 2026.pdf
