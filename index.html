@@ -314,6 +314,29 @@ function encodePath(p){
   return p.map(encodeURIComponent).join('/');
 }
 
+/* Construit les 2 variantes d'URL possibles (NFC / NFD) pour gérer
+   les différences d'encodage Unicode des accents entre OS. */
+function buildHrefVariants(trailPath, name){
+  const segs = [...trailPath, name];
+  const nfc = 'data/' + segs.map(s => encodeURIComponent(s.normalize('NFC'))).join('/');
+  const nfd = 'data/' + segs.map(s => encodeURIComponent(s.normalize('NFD'))).join('/');
+  return nfc === nfd ? [nfc] : [nfc, nfd];
+}
+
+/* Essaie chaque variante d'URL jusqu'à en trouver une qui existe vraiment. */
+async function openFile(trailPath, name){
+  const variants = buildHrefVariants(trailPath, name);
+  for(const url of variants){
+    try{
+      const res = await fetch(url, {method:'HEAD'});
+      if(res.ok){ window.location.href = url; return; }
+    }catch(e){ /* essaie la variante suivante */ }
+  }
+  // Aucune variante confirmée : on tente quand même la première (au cas où
+  // le serveur ne supporte pas HEAD correctement).
+  window.location.href = variants[0];
+}
+
 /* ---------- rendu ---------- */
 const crumbsEl = document.getElementById('crumbs');
 const contentEl = document.getElementById('content');
@@ -363,16 +386,16 @@ function rowFile(node, trailPath){
   const t = typeFor(node.name);
   const el = document.createElement('div');
   el.className='row';
-  const href = 'data/' + encodePath([...trailPath, node.name]);
   el.innerHTML = `
     ${iconHTML(t.icon, t.bg, t.color)}
     <div class="name"><div class="n">${node.name}</div></div>
     <div class="badge">${t.label}</div>
-    <a class="dl" href="${href}" download title="Télécharger" onclick="event.stopPropagation()">
+    <button class="dl" title="Télécharger" onclick="event.stopPropagation()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg>
-    </a>
+    </button>
   `;
-  el.onclick = (e) => { if(e.target.closest('.dl')) return; window.location.href = href; };
+  el.querySelector('.dl').addEventListener('click', () => openFile(trailPath, node.name));
+  el.onclick = (e) => { if(e.target.closest('.dl')) return; openFile(trailPath, node.name); };
   return el;
 }
 
@@ -391,7 +414,6 @@ function cardFolder(node, trailPath){
 
 function cardFile(node, trailPath){
   const t = typeFor(node.name);
-  const href = 'data/' + encodePath([...trailPath, node.name]);
   const el = document.createElement('div');
   el.className='card';
   el.innerHTML = `
@@ -399,7 +421,7 @@ function cardFile(node, trailPath){
     <div class="n">${node.name}</div>
     <div class="meta">${t.label}</div>
   `;
-  el.onclick = () => window.location.href = href;
+  el.onclick = () => openFile(trailPath, node.name);
   return el;
 }
 
