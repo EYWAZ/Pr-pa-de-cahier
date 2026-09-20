@@ -196,19 +196,7 @@
   }
   .pdf-modal-btn:hover{background:var(--bg-alt); color:var(--accent);}
   .pdf-modal-btn svg{width:18px;height:18px;}
-  #pdfFrame{flex:1; width:100%; height:100%; border:none; background:#525659; align-self:stretch;}
-  .preview-body{flex:1; min-height:0; display:flex; align-items:center; justify-content:center; overflow:auto; background:#525659;}
-  .preview-body.text-bg, .preview-body.audio-bg{background:var(--bg);}
-  #previewImg{max-width:100%; max-height:100%; object-fit:contain; display:none;}
-  #previewVideo{max-width:100%; max-height:100%; display:none;}
-  #previewAudio{width:80%; max-width:480px; display:none;}
-  #previewText{
-    display:none; width:100%; height:100%; margin:0; padding:20px 24px;
-    box-sizing:border-box; overflow:auto; white-space:pre-wrap; word-break:break-word;
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:13px; line-height:1.5; color:var(--text); background:var(--bg);
-  }
-  .preview-loading{color:#cfd3da; font-size:13.5px;}
+  #pdfFrame{flex:1; width:100%; border:none; background:#525659;}
 
   @media (max-width:560px){
     .top-inner{padding:14px 16px 10px;}
@@ -274,14 +262,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
-  <div class="preview-body" id="previewBody">
-    <span class="preview-loading" id="previewLoading">Chargement…</span>
-    <iframe id="pdfFrame" title="Aperçu du fichier" style="display:none;"></iframe>
-    <img id="previewImg" alt="">
-    <video id="previewVideo" controls></video>
-    <audio id="previewAudio" controls></audio>
-    <pre id="previewText"></pre>
-  </div>
+  <iframe id="pdfFrame" title="Aperçu PDF"></iframe>
 </div>
 
 <script>
@@ -405,97 +386,28 @@ const pdfModal = document.getElementById('pdfModal');
 const pdfFrame = document.getElementById('pdfFrame');
 const pdfTitle = document.getElementById('pdfTitle');
 const pdfDownload = document.getElementById('pdfDownload');
-const previewBody = document.getElementById('previewBody');
-const previewLoading = document.getElementById('previewLoading');
-const previewImg = document.getElementById('previewImg');
-const previewVideo = document.getElementById('previewVideo');
-const previewAudio = document.getElementById('previewAudio');
-const previewText = document.getElementById('previewText');
 
-/* Détermine comment prévisualiser un fichier selon son extension. */
-const IMAGE_EXTS = ['jpg','jpeg','png','gif','webp','bmp','svg'];
-const VIDEO_EXTS = ['mp4','webm','ogv'];
-const AUDIO_EXTS = ['mp3','wav','ogg'];
-const TEXT_EXTS = ['txt','py','js','ts','json','csv','md','html','css','ino','cfg','log','xml'];
-const OFFICE_EXTS = ['doc','docx','ppt','pptx','xls','xlsx']; // via visionneuse Office en ligne
-function previewKind(name){
-  const ext = name.split('.').pop().toLowerCase();
-  if(ext === 'pdf') return 'pdf';
-  if(IMAGE_EXTS.includes(ext)) return 'image';
-  if(VIDEO_EXTS.includes(ext)) return 'video';
-  if(AUDIO_EXTS.includes(ext)) return 'audio';
-  if(TEXT_EXTS.includes(ext)) return 'text';
-  if(OFFICE_EXTS.includes(ext)) return 'office';
-  return null; // pas d'aperçu -> téléchargement direct
-}
-
-function hideAllPreviewElements(){
-  [pdfFrame, previewImg, previewVideo, previewAudio, previewText].forEach(el => el.style.display = 'none');
-  previewVideo.pause?.();
-  previewAudio.pause?.();
-  previewVideo.removeAttribute('src');
-  previewAudio.removeAttribute('src');
-  previewImg.removeAttribute('src');
-  previewText.textContent = '';
-  pdfFrame.src = '';
-  previewBody.classList.remove('text-bg', 'audio-bg');
-  previewLoading.style.display = 'none';
-}
-
-async function previewFile(trailPath, name, kind){
-  hideAllPreviewElements();
-  previewLoading.style.display = 'block';
+async function previewPdf(trailPath, name){
   const url = await resolveFileUrl(trailPath, name);
   pdfTitle.textContent = name;
   pdfDownload.href = url;
+  pdfFrame.src = url;
   pdfModal.classList.add('open');
   document.body.style.overflow = 'hidden';
-  previewLoading.style.display = 'none';
-
-  if(kind === 'pdf'){
-    pdfFrame.src = url;
-    pdfFrame.style.display = 'block';
-  } else if(kind === 'image'){
-    previewImg.src = url;
-    previewImg.style.display = 'block';
-  } else if(kind === 'video'){
-    previewVideo.src = url;
-    previewVideo.style.display = 'block';
-  } else if(kind === 'audio'){
-    previewAudio.src = url;
-    previewAudio.style.display = 'block';
-    previewBody.classList.add('audio-bg');
-  } else if(kind === 'text'){
-    previewBody.classList.add('text-bg');
-    previewText.style.display = 'block';
-    try{
-      const res = await fetch(url);
-      previewText.textContent = await res.text();
-    }catch(e){
-      previewText.textContent = "Impossible de charger l'aperçu de ce fichier.";
-    }
-  } else if(kind === 'office'){
-    // Le fichier doit être accessible publiquement (site en ligne) pour que
-    // la visionneuse Office Online puisse le récupérer et l'afficher.
-    const absoluteUrl = new URL(url, window.location.href).href;
-    pdfFrame.src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absoluteUrl);
-    pdfFrame.style.display = 'block';
-  }
 }
-
 function closePdfModal(){
   pdfModal.classList.remove('open');
-  hideAllPreviewElements();
+  pdfFrame.src = '';
   document.body.style.overflow = '';
 }
 document.getElementById('pdfClose').addEventListener('click', closePdfModal);
 pdfModal.addEventListener('click', (e) => { if(e.target === pdfModal) closePdfModal(); });
 document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closePdfModal(); });
 
-/* Ouvre en aperçu si le type est supporté, sinon télécharge directement. */
+/* Ouvre en aperçu si c'est un PDF, sinon télécharge directement. */
 function handleFileOpen(trailPath, name){
-  const kind = previewKind(name);
-  if(kind){ previewFile(trailPath, name, kind); }
+  const ext = name.split('.').pop().toLowerCase();
+  if(ext === 'pdf'){ previewPdf(trailPath, name); }
   else { openFile(trailPath, name); }
 }
 
